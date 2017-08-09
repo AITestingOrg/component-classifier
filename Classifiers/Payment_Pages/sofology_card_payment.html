@@ -1,0 +1,95 @@
+
+<link rel="stylesheet" href="https://use.fontawesome.com/06ca245214.css">
+
+<section class="summary">
+  
+  <div class="container">
+  
+  <div class="summary__step">
+    <span class="summary__step__icon summary__step__icon--active">1</span>
+    <div class="summary__step__link summary__step__link--active"></div>
+    <span class="summary__step__text">Delivery details</span>
+  </div>
+  
+  <div class="summary__step">
+    
+    <span class="summary__step__icon summary__step__icon--active">2</span>
+    <div class="summary__step__link"></div>
+    <span class="summary__step__text">Finance application</span>
+  </div>
+  
+  <div class="summary__step">
+    <span class="summary__step__icon">3</span>
+    <span class="summary__step__text">Complete</span>
+  </div>
+  
+  </div>
+  
+</section>
+
+<section class="card">
+  
+  <div class="container">
+    
+    <div class="card__miniHeader">
+      
+      <h2>Your deposit payment</h2>
+      <p>You chose an initail deposit of &pound;347 to pay now with <span>monthly payments of &pound;47</p>
+    </div>
+    
+    <div class="card__box">
+      
+      <div class="card__waitingForBank"> 
+        <h3>LOADING</h3>
+      </div>
+      
+      <form name="card" class="forms">
+        <label for="number">Card number</label>
+        <input type="text" name="number"  class="forms__input forms__input--large" required />
+        
+        <label for="name">Card name</label>
+        <input type="text" name="name"  class="forms__input forms__input--large" required />
+        
+        <div class="card__form__expiry">
+          <label>Card expiry</label>
+          <input type="text" name="expMonth" class="forms__input forms__input--small" required />
+          <span>/</span>
+          <input type="text" name="expYear" required class="forms__input forms__input--small" required />
+          
+        </div>
+        
+        <div class="card__form__cvc">
+          <label>Security number</label>
+          <input type="text" class="forms__input forms__input--small" name="cvc" required />
+          
+<!--            <p>The last 3 digits on the back of the card</p> -->
+          
+        </div>
+        
+        
+      </form>
+    
+    
+    </div>
+    
+    <!-- end of box -->
+    
+    <div class="card__info">
+      
+      <button class="btn btn--checkout click">Pay securely</button>
+        
+      <p>This is secure</p>
+      
+      <p>All of your personal details are safe</p>
+      
+      
+    </div>
+    
+  </div>
+  
+  <!-- end of container -->
+  
+
+</section>
+
+<!-- end of card page -->

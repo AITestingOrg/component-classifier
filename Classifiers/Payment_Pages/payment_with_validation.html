@@ -1,0 +1,118 @@
+
+ <form action="" id="ACHform">
+<div id="showswhereheaderis"></div>
+<div id="container">
+	<div class="contents">
+
+		<div class="formheader">
+			<div class="paymentsteps stepone"></div>
+			<h2>Pay Using a checking account</h2>
+		</div>
+
+		<div class="inset">
+			<div class="topright">Policy Number: <span class="light">678321</span></div>
+
+        	<div class="block paddingbottom20">
+          		<h3>Select the payment amount</h3>
+            	<div class="radiogrid">
+              		<div class="radiorow">
+                		<div class="radiocell">
+                  			<input type="radio" name="option"value="NextAmountDue">
+                 			 <label for="CurrentAmountDue">Current Amount Due</label>
+                		</div>
+                  			<div class="radiocell paddingtop2"><span class="light">$219.00</span></div>
+             		</div>
+     
+              		<div class="radiorow">
+                		<div class="radiocell">
+                      <input type="radio" name="option" value="RemainingBalance" />
+                  			<label for="RemainingBalance">Remaining Balance</label>
+              			</div>  
+                 			<div class="radiocell paddingtop2" ><span class="light" id="ctl00_ContentPlaceHolderBody_lblRemainingAmount">$519.00</span></div>
+              		</div>
+         
+              		<div class="radiorow">
+               			<div class="radiocell">
+                  			<input type="radio" name="otheramount" id="otheramount">
+                  			<label for="otheramount">Other Amount</label>
+                		</div>
+                  			<input type="text" class="textbox small" width="10" name="otheramountvalue">
+              		</div>
+            	</div>     
+        	</div>
+            
+                    
+           
+                    
+            <div class="block">
+             	<h3>Enter the payment amount</h3>
+              	<div class="textgrid">
+                	<div class="textrow">
+                    	<label for="name" class="lefttextlbl" for="RemainingBalance">Name of Payee</label>
+                  		<div class="lefttextinput">
+                 			 <input type="text" class="textbox medium" name="name"> <span class="info">Enter the name as it appears on the check<span>
+                 		</div>
+                	</div>
+                  
+                   	<div class="textrow">
+                    	<label class="lefttextlbl" for="RemainingBalance">Email address</label>
+                  		<div class="lefttextinput">
+                    		<input type="text" class="textbox medium" name="email" > <span class="info">We'll send your payment confirmation receipt here</span>
+                  		</div>
+                	</div>
+               </div>
+    		</div>  
+		</div>
+               
+		<div class="secureblock">
+			<div class="inset">
+				<div class="sbdata">
+					<h3>Enter secure payment information</h3>
+					<div class="textgrid">
+						<div class="textrow">
+							<label class="lefttextlbl" for="RemainingBalance">Account Number</label>
+							<div class="lefttextinput">
+								<input type="text" class="textbox medium accountnumber" name="accountnumber" for="name"> <a href=""><span class="info">Where is my account number?</span></a>
+							</div>
+						</div>
+
+                	<div class="textrow">
+                    	<label class="lefttextlbl" for="RemainingBalance">Confirm Account Number</label>
+                  		<div class="lefttextinput">
+                  			<input type="text" class="textbox medium" name="accountnumberconfirm"> 
+                 		</div>
+                  	</div>
+                  
+                    <div class="textrow">
+                    	<label class="lefttextlbl" for="RemainingBalance">Routing Number</label>
+                  		<div class="lefttextinput">
+                    		<input type="text" class="textbox medium" name="routingnumber"><a href=""><span class="info"> Where is my routing number?</span></a>
+                  		</div>
+                  	</div>                 
+				</div>
+			</div>
+                  
+            <div class="secureright">
+            	<div class="SecureImage"></div>
+          	</div> 
+            <div class="clear"></div>                
+		</div>
+	</div>
+                         
+                      
+	<div class="inset">           
+		<div class="block">
+			<div class="leftside">
+				<input type="submit" name="ctl00$ContentPlaceHolderBody$btnSubmit" value="Return to policy" class="btnSecondary">    
+			</div>
+			<div class="rightside">
+				<input type="checkbox" name="paymentauthorization" value="Bike"> I agree to the terms and conditions of the <a href="" class="authorize">Payment Authorization Agreement</a>
+				<br>
+				<input type="submit" name="ctl00$ContentPlaceHolderBody$btnSubmit" value="Pay using your checking account" class="btnPrimary">
+			</div>
+		</div>    
+    <div class="clear"></div>   
+	</div>
+</div>
+
+                  </form>

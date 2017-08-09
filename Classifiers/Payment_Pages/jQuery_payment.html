@@ -1,0 +1,27 @@
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
+<script src='https://stripe.github.io/jquery.payment/lib/jquery.payment.js'></script>
+
+<div class="title">
+  <span>jQuery Payment</span>
+  auto formatting input fields for a better payment UX
+</div>
+
+<div class="payment">
+
+  <form novalidate autocomplete="on">
+    
+    <label>Card number:</label>
+    <input type="text" class="cc-number" pattern="\d*" x-autocompletetype="cc-number" placeholder="•••• •••• •••• ••••" required />
+
+    <label>Expires:</label>
+    <input type="text" class="cc-exp" pattern="\d*" x-autocompletetype="cc-exp" placeholder="MM / YYYY" required maxlength="9" />
+
+    <label>CVC:</label>
+    <input type="text" class="cc-cvc" pattern="\d*" x-autocompletetype="cc-csc" placeholder="123" required maxlength="4" autocomplete="off" />
+
+    <label class="validation"></label>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</div>

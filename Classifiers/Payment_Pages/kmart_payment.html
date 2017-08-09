@@ -1,0 +1,627 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" ng-app="checkout" id="ng-app">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8,9,10,11, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="304Fix" content="safari-fix">
+<title ng-bind-html="pageTitle"></title>
+
+<link rel="stylesheet"
+	href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+<link rel="stylesheet" href="/crsp/content/2016/prdcommonb/static/min/css/common.css">
+<link rel="stylesheet" href="/crsp/content/2016/prdcommonb/static/min/css/kmart-global.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<link rel="Shortcut Icon" href="//c.shld.net/staticassets/Assets_0.90/img/kmart/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="checkout" subid="{{bodyId}}">
+
+<script>
+	var paramMap = {};
+	var angPath = '';
+	var jsPath = '/crsp/content/2016/prdcommonb/static/min/';
+	var ecouponsUrl = '';
+	var site = 'kmart';
+	var siteName = 'kmart';
+	var parentSite = 'kmart';
+	var sywrNumberSession = '';
+	var exchangeString = '';
+	var identifier = '';
+	var method = '';
+	var orderType = '';
+	var exchngItems = '';
+	var purchaseDate = '';
+	var localAdEnabled = 'true';
+</script>
+
+<![if !IE]>
+<script src="/crsp/content/2016/prdcommonb/static/min/js/angular.js"></script>
+<script src="/crsp/content/2016/prdcommonb/static/min/js/angularext.js"></script><![endif]>
+<!--[if gt IE 7]>
+<script src="/crsp/content/2016/prdcommonb/static/min/js/angular.js"></script>
+<script src="/crsp/content/2016/prdcommonb/static/min/js/angularext.js"></script><![endif]-->
+<!--[if lt IE 8]>
+<script src="/crsp/content/2016/prdcommonb/static/min/js/angularie.js"></script>
+<script src="/crsp/content/2016/prdcommonb/static/min/js/angularieext.js"></script><![endif]-->
+
+
+<script src="/crsp/content/2016/prdcommonb/static/min/js/exts.js"></script>
+<script src="/crsp/content/2016/prdcommonb/static/min/js/common.js"></script>
+
+
+<script src="//c.shld.net/staticAssets/Assets_0.90/js/shcGlobalCombine-min.js"></script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+ var omnitureEnabled= 'false';
+ var omAcct='searskmartcom';
+ var omAcctUrl='//c.shld.net/staticassets/versions/kmart/js/s_code.js';
+
+ //get the value for international and other sites directly from backend. Do not rely on the isI18NConvReq
+ if (typeof (isI18NConvReq) == "function")
+		if (isI18NConvReq())
+			omAcct = omAcct + "searsinternational";
+</script>
+
+
+
+
+
+<script>window.shc = $.extend(window.shc, { chronStoreName: 'kmart-us', imagePath: '//k.shld.net/07081630/' });</script><script type="text/javascript">
+shc = $.extend(shc, {
+ storeId: '10151',
+ catalogId: '10104',
+ langId: '-1',
+ hdrFallbackVersion: 'v3'
+});
+shc.storeName = shc.storeName || 'kmart';
+</script><script type="text/javascript">
+var shcWidgets = {
+	/* Constants for event names */
+	EVENTS: {
+		openWidget: 'shcW.openWidget',
+		closeWidget: 'shcW.closeWidget',
+		dataSYWR: 'shcW.dataSYWR',
+		gnfLoaded: 'shcW.gnfLoaded',
+		cartUpdated: 'shcW.cartUpdated',
+		zipcodeUpdated: 'shcW.zipcodeUpdated',
+		storeUpdated: 'shcW.storeUpdated',
+		couponsUpdated: 'shcW.couponsUpdated',
+		signalDataReady: 'shcW.signalDataReady',
+		chatDataReady: 'shcW.chatDataReady',
+		dataReady: 'shwc.dataReady'
+	},
+        /* Passed to Profile services to identify the current store */
+	USR_SITEID: {
+		'10153': '3',
+		'10151': '4',
+		'10154': '5',
+		'10155': '6',
+		'10165': '22'  //searsPR
+	}
+};
+shc = $.extend(window.shc, {
+    isNewSpanish:true,
+    getPageType: function() {
+	var pageId = $.q('body').attr('id'), pt;		
+	switch (pageId) {
+		case 'checkout':
+		case 'login':
+			pt = pageId;
+			break;
+		default:
+			pt = 'none';
+		}
+		return pt;
+	}
+});
+</script><script type="text/javascript">
+//Common values which can be derived for all pages-test
+shc = $.extend(shc, {
+  commonQS: '?storeId=' + shc.storeId + '&catalogId=' + shc.catalogId + '&langId=' + shc.langId,
+  env: /(pilot\.)/.test(location.hostname) ? 'PILOT' : 'PROD',
+  sslPort: '443',
+  casServerName: 'http://sso.shld.net',
+  casServerNameHttps: 'https://sso.shld.net:443',
+  isOutlet: /SHC\-HTS|SHC\-HAS|SHC\-AHS|SHC\-OUT/.test(navigator.userAgent),
+  footer: false, 
+  IRP: true,
+  entCSSVersion: '.1.7.1',
+  abTest:{},
+  versions: {base: 'Assets_0.90/', scode:'18'},
+  isKiosk: trim($.cookie('KI_FLAG')).toLowerCase() === 'true',
+  isSYWR: location.href.indexOf('shopyourway.com') >=0,
+  isBOT: trim($.cookie('ot')).indexOf('-bots-')>=0 || !!$.query.get('isBOT'),
+  isNewSpanish: true,
+  freeShipThreshold: {default:49, sywmax:30}
+});
+shc.asapAkamaiBasePath = shc.asapAkamaiBasePath || '';
+//need to have path prefixed for dynamic file adds in IE8
+shc.imagePath = (shc.imagePath.indexOf('http') >=0 ? '' : location.protocol) + shc.imagePath;
+shc.siteId=shcWidgets.USR_SITEID[shc.storeId];
+
+shc.gaSite=(function() {
+var env = shc.env, map = {
+  'sears': env==='PROD'?'3':'1',
+  'sears-pr': env==='PROD'?'3':'1',
+  'kmart': env==='PROD'?'4':'2',
+  'kmart-pr': env==='PROD'?'4':'2'
+  };
+   return 'UA-71669311-' + (map[shc.storeName] || 'none');
+}());
+
+shc.URLs = $.extend(shc.URLs, {
+    chronometer: shc.env === 'STAGE' ? '//chronometervip.stress.ch3.s.com/' : '//chrono.shld.net/',
+    secureURL: String.format('https://{1}:{0}/', shc.sslPort, location.hostname),
+    chronData: 'segments/',
+    chronAssets: 'assets/',
+    orderStatus: String.format('https://{1}:{0}/universalprofile/OrderHistory?upid={2}',shc.sslPort, location.hostname, shcWidgets.USR_SITEID[shc.storeId]),
+    orderStatusError: '/shc/s/OrderStatusLoginModalView' + shc.commonQS + '&shcapiBypassSSO=true&errorCode=&OrdStatErr=',
+    logonForm: '/shc/s/LogonForm' + shc.commonQS + '&URL=TopCategoriesDisplay',
+    userLogoff: String.format('https://{1}:{0}/shc/s/Logoff{2}' +
+    '&personalizedCatalog=true&LogoffFlag=true&URL=TopCategoriesDisplay&rememberMe=false', shc.sslPort, location.hostname, shc.commonQS),
+    profile: String.format('https://{1}:{0}/universalprofile/dashboard?upid={2}', shc.sslPort, location.hostname, shcWidgets.USR_SITEID[shc.storeId]),
+    orderCenter: String.format('https://{1}:{0}/universalprofile/checkorderstatus?upid={2}',shc.sslPort, location.hostname, shcWidgets.USR_SITEID[shc.storeId]),
+   userLoginView: String.format('https://{1}:{0}/shc/s/USRLoginViewHttps{2}', shc.sslPort, location.hostname, shc.commonQS),
+    scene7: 'https://s.shld.net/is/image/Sears/',
+   listCenter: String.format('https://{1}:{0}/universalprofile/listcenter?upid={2}',shc.sslPort, location.hostname, shcWidgets.USR_SITEID[shc.storeId]),
+    miniCartCount: '/crsp/api/cart/v1/itemcount',
+    addToCart: '/crsp/mx/cart',
+    staticAssets: 'https://c.shld.net/staticassets/Assets_0.90/',
+    searsCard: String.format('https://{1}:{0}/universalprofile/ApplyCitiSearsCard?upid={2}',shc.sslPort, location.hostname, shcWidgets.USR_SITEID[shc.storeId]),
+    paySearsCard: 'http://pay.searscard.com',
+    returns: String.format('https://{1}:{0}/universalprofile/makeareturn?upid={2}',shc.sslPort, location.hostname, shcWidgets.USR_SITEID[shc.storeId]),
+    manageAccount: String.format('https://{1}:{0}/universalprofile/managemyaccount?upid={2}',shc.sslPort, location.hostname, shcWidgets.USR_SITEID[shc.storeId]),
+    layawayPmt: ['10151', '10153'].indexOf(shc.storeId) >=0 ? String.format('https://{1}:{0}/universalprofile/layawayorders?upid={2}',shc.sslPort, location.hostname, shcWidgets.USR_SITEID[shc.storeId]) : '',
+    dealCenter: ['10151', '10153'].indexOf(shc.storeId) >=0 ? String.format('/shc/s/dealscenter?storeId={0}&catalogId={1}&fromLandingPage=true', shc.storeId, shc.catalogId) : '',
+    giftCards: ['10153', '10165'].indexOf(shc.storeId) >= 0 ? String.format('/{0}-gift-cards.html', shc.storeName.replace('-','')) : 
+shc.storeId === '10151' ? String.format('/{0}-gift-cards.html', shc.storeName.replace('-pr','')) : '',
+  // recommendations:'/en_us/dap/my-recommendations.html ',
+   tecMM: 'https://pop.telluride.sears.com/tellurideAS/MemberMessaging',
+   webservices: '//api.sears.com',
+   api: {
+    zipHelper: '/globalapi/v1/store/ziphelper/zip/',
+    schedule: '/globalapi/v1/store/schedule/'
+   },
+   certona: String.format('//edge1.certona.net/cd/5abc36e3/{0}.com/scripts/resonance.js',shc.storeName),
+   autofill: /i\-prod|i2\-prod/.test(location.href) ? '//solrx4119p.stag.ch4.s.com:8180/autofill/search' : ('https://' +location.hostname + '/autofill/search')
+});
+
+shc.features = $.extend(shc.features, {
+  autofill:true,
+  omniture: true,
+  SYWR: {enabled: true, refresh: 5},
+  regPricing: {enabled: 'ON'  /*legacy stupidity - should be a boolean*/},
+  disableHdrMiniCart: true,
+  newMiniCart: shc.storeId !== '10165',
+  reserveIt: shc.storeId === '10153',
+  sywrOffer: true,
+  ssoDisabled: false, //SSOContingency from WCS
+  headerCoupons: {
+    enabled: false,
+      shcApi: {
+      details: 'https://api.sears.com/shcapi/v2/userCoupon/json/getCouponInfo,1500,ecpnbrwBA6DF77123C6A9A1A0AB5466AA5192013,UCoupon_BRW',
+      headerClient: 'hdr',
+      headerFields: 'count'
+   }
+  },
+  messaging: ['sears-us', 'kmart-us'].indexOf(shc.chronStoreName)>=0 && !shc.isSYWR && !$.query.get('msgOff'), //US only
+  chat247: ['10151','10153'].indexOf(shc.storeId)>=0 && !shc.isBOT && !shc.isSYWR && !$.query.get('noChat'),
+  localAd: false, 
+  splitNav: ['sears-us', 'kmart-us', 'sears-pr','kmart-pr'].indexOf(shc.chronStoreName)>=0,
+  miniPop: ['sears-us', 'kmart-us'].indexOf(shc.chronStoreName) >= 0,
+  addToCart: ['product', 'shoppingcart', 'browse-page'].indexOf($('body').attr('id')) >=0 || /managemyaccount|automotive\-tires\-wheels\-tires/.test(location.href),
+  pheroType: 'ASAP',
+  autofillCategoryOff: true
+});
+// legacy global vars used by modalLogin.js/SPURefactor*.js
+var storeId = shc.storeId, catalogId = shc.catalogId, langId = shc.langId,
+ isKiosk = shc.isKiosk.toString(),
+ casServerName = shc.casServerName,
+ casServerNameHttps = shc.casServerNameHttps,
+ CASUrl = shc.casServerNameHttps + '/shccas/shcLogin?gateway=true&method=POST',
+ CASServiceParam = '&service=http://searsdomain.com/TestApp',
+ UserLoginModalURL = shc.URLs.orderStatus,
+ storeDomain = location.hostname,
+ sslPort = shc.sslPort,
+ imagePath = shc.imagePath,
+ jspStoreImgDir = shc.imagePath, //legacy var still in use many places
+ usrModalFeature = 'ON', //legacy - drives the new USR reg
+ usrLoginModalFeature = 'ON', //legacy - drives new USR login
+ omnitureEnabled = shc.features.omniture ? 'true' : 'false',
+ usrLoginViewHttps = shc.URLs.userLoginView,  //legacy - drives new USR login
+ RPOmnitureCheck = false,
+ pageFlag = ''; //legacy - SPURefactorHeader;
+
+//Various A/B testing setup
+shc.abTest = function() {
+	var ab = {}, ngsub = $.cookie('ngsub');
+	if ($.cookie('MP_LANG')==='es') {return ab;} //disable test in spanish 
+	if (!!ngsub) {
+		switch (ngsub) {
+		default: //nothing
+	}
+}
+return ab;
+}();
+</script><script src="https://c.shld.net/staticassets/versions/shc/js/mbox_at.js?v5"></script><script src="https://c.shld.net/staticassets/Assets_0.90/js/kmart/s_code-min.js?v7"></script>
+
+
+
+
+
+
+
+
+
+
+	
+	<input type="hidden" id="casServerNameHttps" value="https://sso.shld.net" />
+	<script type="text/javascript" language="JavaScript" src="https://sso.shld.net/usr/PROD/universalSignInCombined.js"></script>
+	
+	
+	<script type="text/javascript" language="JavaScript" src="https://mws.acculynk.net/mws/scripts/MerchantScriptPostMessage.js"></script>
+	
+
+
+
+
+
+<input type="hidden" name="site" value="kmart"/>
+<input type="hidden" name="ang_path" value=""/>
+<input type="hidden" name="ang_js_path" value="/crsp/content/2016/prdcommonb/static/min"/>
+<input type="hidden" name="ang_route" value="checkout/"/>
+<input type="hidden" name="ecouponsUrl" id="ecouponsUrl" value=""/>
+<input type="hidden" name="sywrNumberSession" id="sywrNumberSession" value=""/>
+<input type="hidden" name="exchangeJSON" id="exchangeJSON" value=""/>
+
+<script>
+	var pageRoute = 'checkout/';
+	var imagePath = '';
+	var email = '';
+	var userEmail = 'gamemaster044@yahoo.com';
+	var cartTecMsgUrl = '';
+	var urlCartId = 'null';
+    var orderId = 'null';	
+    var port = '';
+	var secport = '';
+	var locname = 'www.kmart.com';
+	var httpUrl = 'http://www.kmart.com/';
+	var httpsUrl = 'https://www.kmart.com/';
+	var isSywr = 'false';
+	var sywHomePage = 'http://www.shopyourway.com';
+	var isIntl = 'false';
+	var casLoginEmail = 'gamemaster044@yahoo.com';
+	var casLoginSid = '4';
+</script>
+
+
+
+<div id="uipage" class="ui-view" breakpoint="breakpoint" globalbreakpoint="true"></div>
+<input type="hidden" name="hostname" value="crscommona.prod.global.s.com"/>
+<input type="hidden" name="sessionId" value="f582c69a-3d22-4338-b16f-aa6a1aaf7487"/>
+
+
+<script type="text/javascript">
+ var lazyAngBrightag = '';
+ var lazyBrightag = '';
+ var btSwitch = 'ON';
+ var btSiteId = 'IctsMUI';
+</script>
+
+
+
+
+	
+
+ 
+
+
+
+<style>
+.checkout-footer {
+    background-color: #eee;
+    border-bottom: 40px solid #eee;
+    overflow: hidden;
+    padding: 40px 0 0;
+    position: relative;
+    width: 100%;
+}
+.checkout-footer .sears-brand {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.checkout-footer .footer-links {
+    margin: 20px 0 0;
+    text-align: center;
+}
+.checkout-footer .footer-links ul {
+    list-style: outside none none;
+}
+.checkout-footer .footer-links ul li {
+    display: inline;
+    font-size: 0.867em;
+    padding: 7px;
+}
+.checkout-footer .footer-links ul li a {
+    color: #333;
+}
+.checkout-footer .secure-links {
+    display: table;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+.checkout-footer .secure-links div {
+    cursor: pointer;
+    float: left;
+    margin-left: 20px;
+}
+.checkout-footer .secure-links div:hover {
+    opacity: 0.75;
+    transition: all 0.25s ease-in 0s;
+}
+.checkout-footer .secure-links div:first-child {
+    margin-left: 0 !important;
+}
+.checkout-footer .gnf-back-to-top {
+    z-index: 1;
+}
+.gnf-back-to-top {
+    background-color: #fff;
+    border: 3px solid #d0d0d0;
+    border-radius: 60px;
+    bottom: 0;
+    height: 52px;
+    position: absolute;
+    right: 25px;
+    text-align: center;
+    width: 52px;
+}
+#login .gnf-back-to-top {display:none;}
+
+.gnf-back-to-top div.top-text {
+    line-height: 66px;
+}
+.gnf-back-to-top div.top-text span {
+    color: #666;
+    font-size: 18px;
+    font-weight: 300;
+    text-indent: 1px;
+    text-transform: uppercase;
+}
+.gnf-back-to-top:hover {
+    background-color: #e3e3e3;
+    cursor: pointer;
+}
+.gnf-back-to-top:hover div.triangle span.border-tri {
+    border-color: transparent transparent #e3e3e3;
+}
+.gnf-back-to-top div.triangle {
+    height: 8px;
+    left: 16px;
+    position: absolute;
+    top: 10px;
+    width: 22px;
+}
+.gnf-back-to-top div.triangle span.main-tri {
+    border-color: transparent transparent #333;
+    border-style: solid;
+    border-width: 0 11px 8px;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.gnf-back-to-top div.triangle span.border-tri {
+    border-color: transparent transparent #fff;
+    border-style: solid;
+    border-width: 0 9px 5px;
+    left: 2px;
+    position: absolute;
+    top: 3px;
+}
+</style>
+<div class="checkout-footer">
+<strong class="sears-brand"><span>2017 Sears Brands, LLC. All Rights Reserved</span></strong>
+<div class="gnf-back-to-top" tab-index-click="tab-index-click" speed="5" target-element="top" shc-smooth-scroll="shc-smooth-scroll" tabindex="0">
+<div class="triangle"><span class="main-tri"></span><span class="border-tri"></span></div>
+<div class="top-text"><span>TOP</span></div>
+</div>
+<div class="footer-links"><ul><li>
+<a target="_blank" rel="nofollow" href="/csterms/nb-100000000000005" data-trk="Y" rev="om">Terms of Use</a></li><li>
+<a target="_blank" rel="nofollow" href="/csprivacy/nb-100000000000006" data-trk="Y" rev="om">Privacy Policy</a></li><li>
+<a target="_blank" rel="nofollow" href="/km-california-privacy-policy/nb-100000000155504" data-trk="Y" rev="om">California Privacy Rights</a></li><li>
+<a target="_blank" rel="nofollow" href="/cscasupplychain2010/nb-120000000249461" data-trk="Y" rev="om">California Transparency Act</a></li><li>
+<a target="_blank" rel="nofollow" href="/en_us/customer-service/product-information/product-recalls.html" data-trk="Y" rev="om">Product Recalls</a></li>
+</ul>
+</div><div id="searsExclusion" class="layer-scroll temp-offer-copy" style="display:none">
+<p><strong><u>Details and Exclusions</u></strong></p>
+<p><strong>30% Off Offer: </strong>With credit approval, 30% off with qualified purchase up to total statement credit of $35 when you make your first qualifying purchase today with your new Sears Mastercard&reg;.</p>
+<p>First purchase must be made same day as account opening in order to receive statement credit.</p>
+<p>To make a purchase today at a Sears or Kmart store, bring a photo ID and have an associate complete an account number look-up.</p>
+<p>Limit one new account offer per account. Offer at participating locations only and may vary. The new account offer of 30% off will not apply if your first purchase or subsequent first day purchase is subject to different special financing (deferred interest) offer. Offers are subject to change without notice. Restrictions apply.</p>
+<p>&nbsp;</p>
+<p><strong><u>5% off or Special financing offers:</u></strong></p>
+<h1><strong>HOME APPLIANCES</strong></h1>
+<p><br/> <strong>5% OFF ON SELECT HOME APPLIANCES(A) ITEMS OVER $499+ OR NO INTEREST IF PAID IN FULL WITHIN 12 MONTHS** </strong>on select home appliance(A) items over $499+. Interest will be charged to your account from the purchase date if the purchase balance is not paid in full within 12 months. Offer requires the use of a qualified Sears Card. <br/> <br/> Offer valid May 28<sup>th</sup> through July 1<sup>st</sup>, 2017.</p>
+<p><u>See financing disclosures and exclusions (A)</u> <br/> <br/> (A) Offer available on items sold by Sears only. In-store offers may vary. Subject to change without notice. Offer requires the use of a qualified Sears Card and is subject to credit approval. Excludes Sears Commercial One&reg; accounts. Sears Home Improvement AccountSM applies on installed merchandise only. Must select the Savings offer or Special Financing offer on the payment page in checkout to get instant savings or special financing offer. May not be combined with other promotional offers. Excludes closeouts, clearance, Smart Buys, Unilateral Pricing Policy (UPP) and Everyday Great Price items, Jenn-Air, Dacor, floor care, sewing machines, countertop microwaves, air conditioners, fans, heaters, humidifiers, dehumidifiers and floor care accessories. <br/> </p>
+<h1><strong>FITNESS</strong></h1>
+<p><br/> <strong>5% OFF ON FITNESS EQUIPMENT (B) ITEMS OVER $299+ OR NO INTEREST IF PAID IN FULL WITHIN 12 MONTHS** </strong>on fitness equipment (B) items over $299+. Interest will be charged to your account from the purchase date if the purchase balance is not paid in full within 12 months. Offer requires the use of a qualified Sears Card. <br/> <br/> Offer valid May 28<sup>th</sup> through July 1<sup>st</sup>, 2017. <br/> <br/> <u>See financing disclosures and exclusions (B)</u> <br/> <br/> (B) Offer available on items sold by Sears only. In-store offers may vary. Subject to change without notice. Offer requires the use of a qualified Sears Card and is subject to credit approval. Excludes Sears Commercial One&reg; accounts. Sears Home Improvement Account<sup>SM</sup> applies on installed merchandise only. Must select the Savings offer or Special Financing offer on the payment page in checkout to get instant savings or special financing. May not be combined with other promotional offers. Excludes Unilateral Pricing Policy (UPP) and Everyday Great Price items. <br/> </p>
+<h1><strong>TOOLS</strong></h1>
+<p><br/> <strong>5% OFF TOOLS(C) PURCHASES IN STORE &amp; ONLINE OR NO INTEREST IF PAID IN FULL WITHIN 12 MONTHS** </strong>on tools(C) items over $299+ in-store only. Interest will be charged to your account from the purchase date if the purchase balance is not paid in full within 12 months. Offer requires the use of a qualified Sears Card. <br/> <br/> Offer valid May 28<sup>th</sup> through July 1<sup>st</sup>, 2017. <br/> <br/> <u>See financing disclosures and exclusions(C) </u><br/> <br/> (C) Offer available on items sold by Sears only. In-store offers vary. Subject to change without notice. Offer requires the use of a qualified Sears Card and is subject to credit approval. Excludes Sears Commercial One &reg; accounts. Sears Home Improvement AccountSM applies on installed merchandise only. Must select the Savings offer or Special Financing offer on the payment page in checkout to get instant savings or special financing. Sears Home Improvement AccountSM applies on installed merchandise only. May not be combined with other promotional offers. Excludes Unilateral Pricing Policy (UPP) and Everyday Great Price items. <br/> </p>
+<h1><strong>MATTRESSES</strong></h1>
+<p><strong>&nbsp;</strong></p>
+<p><strong>5% OFF ON MATTRESSES/FOUNDATIONS(D) ITEMS OVER</strong> <strong>$599+ OR NO INTEREST IF PAID IN FULL WITHIN PROMOTIONAL PERIOD </strong>on assorted mattress/foundations(D) items over $599+:</p>
+<p>-18 months** on Mattresses/Foundations(D) $599+ - $1,499.99+</p>
+<p>-24 months** on Mattresses/Foundations(D) $1,500+ - $2,499.99+</p>
+<p>-48 months** on Mattresses/Foundations(D) $2,500+ - $4,099.99+</p>
+<p>-60 months** on Mattresses/Foundations(D) $4,100+ and above</p>
+<p>&nbsp;</p>
+<p>Interest will be charged to your account from the purchase date if the purchase balance is not paid in full within the promotional period. Offer requires the use of a qualified Sears Card.&nbsp;&nbsp;</p>
+<p>Offer valid May 28<sup>th</sup> through June 4<sup>th</sup>, 2017.</p>
+<p><u>See financing disclosures and exclusions (D)</u></p>
+<p>(D) Offer available on items sold by Sears only. In-store offers may vary. Subject to change without notice. Offer requires the use of a qualified Sears Card and is subject to credit approval. Excludes Sears Commercial One&reg; accounts. Sears Home Improvement Account <sup>SM </sup>applies on installed merchandise only. Must select the Savings offer or Special Financing offer on the payment page in checkout to get instant savings or special financing. May not be combined with other promotional offers. Excludes Unilateral Pricing Policy (UPP), Everyday Great Price items, Serta Coralee, Foreston, Hadley, Taryn, Serta Ebuy, Amber Creek, Willow Park, Sealy Talworth, Anaheim, Basford, Dunlap, Sealy Ebuy, Beautyrest Black, Comforpedic and Tempur-Pedic.</p>
+<p><strong>5% OFF ON MATTRESSES/FOUNDATIONS(E) ITEMS OVER</strong> <strong>$599+ OR NO INTEREST IF PAID IN FULL WITHIN 12 MONTHS </strong>on assorted mattress/foundations(E) items over $599+. Interest will be charged to your account from the purchase date if the purchase balance is not paid in full within 12 months. Offer requires the use of a qualified Sears Card.&nbsp;&nbsp;</p>
+<p>Offer valid June 5<sup>th</sup> through June 10<sup>th</sup>, 2017.</p>
+<p><u>See financing disclosures and exclusions (E)</u></p>
+<p>(E) Offer available on items sold by Sears only. In-store offers may vary. Subject to change without notice. Offer requires the use of a qualified Sears Card and is subject to credit approval. Excludes Sears Commercial One&reg; accounts. Sears Home Improvement Account <sup>SM </sup>applies on installed merchandise only. Must select the Savings offer or Special Financing offer on the payment page in checkout to get instant savings or special financing. May not be combined with other promotional offers. Excludes Unilateral Pricing Policy (UPP), Everyday Great Price items, Serta Coralee, Foreston, Hadley, Taryn, Serta Ebuy, Amber Creek, Willow Park, Sealy Talworth, Anaheim, Basford, Dunlap, Sealy Ebuy, Beautyrest Black, Comforpedic and Tempur-Pedic.</p>
+<p><strong>5% OFF ON MATTRESSES/FOUNDATIONS(F) ITEMS OVER</strong> <strong>$599+ OR NO INTEREST IF PAID IN FULL WITHIN PROMOTIONAL PERIOD </strong>on assorted mattress/foundations(F) items over $599+:</p>
+<p>-18 months** on Mattresses/Foundations(F) $599+ - $1,499.99+</p>
+<p>-24 months** on Mattresses/Foundations(F) $1,500+ - $2,499.99+</p>
+<p>-48 months** on Mattresses/Foundations(F) $2,500+ - $4,099.99+</p>
+<p>-60 months** on Mattresses/Foundations(F) $4,100+ and above</p>
+<p>&nbsp;</p>
+<p>Interest will be charged to your account from the purchase date if the purchase balance is not paid in full within the promotional period. Offer requires the use of a qualified Sears Card.&nbsp;&nbsp;</p>
+<p>Offer valid June 11<sup>th</sup> through July 1<sup>st</sup>, 2017.</p>
+<p><u>See financing disclosures and exclusions (F)</u></p>
+<p>(F) Offer available on items sold by Sears only. In-store offers may vary. Subject to change without notice. Offer requires the use of a qualified Sears Card and is subject to credit approval. Excludes Sears Commercial One&reg; accounts. Sears Home Improvement Account <sup>SM </sup>applies on installed merchandise only. Must select the Savings offer or Special Financing offer on the payment page in checkout to get instant savings or special financing. May not be combined with other promotional offers. Excludes Unilateral Pricing Policy (UPP), Everyday Great Price items, Serta Coralee, Foreston, Hadley, Taryn, Serta Ebuy, Amber Creek, Willow Park, Sealy Talworth, Anaheim, Basford, Dunlap, Sealy Ebuy, Beautyrest Black, Comforpedic and Tempur-Pedic.</p>
+<h1><strong>FURNITURE</strong></h1>
+<p>&nbsp;</p>
+<p><strong>5% OFF ON SELECT FURNITURE(G) ITEMS OVER</strong> <strong>$599+ OR NO INTEREST IF PAID IN FULL WITHIN PROMOTIONAL PERIOD </strong>on assorted mattress/foundations(G) items over $599+:</p>
+<p>-18 months** on SELECT FURNITURE(G) $599+ - $1,499.99+</p>
+<p>-24 months** on SELECT FURNITURE(G) $1,500+ - $2,499.99+</p>
+<p>-48 months** on SELECT FURNITURE(G) $2,500+ - $4,099.99+</p>
+<p>-60 months** on SELECT FURNITURE(G) $4,100+ and above</p>
+<p>Interest will be charged to your account from the purchase date if the purchase balance is not paid in full within the promotional period. Offer requires the use of a qualified Sears Card.&nbsp;&nbsp;</p>
+<p>Offer valid May 28<sup>th</sup> through June 4<sup>th</sup>, 2017.</p>
+<p><u>See financing disclosures and exclusions (G)</u></p>
+<p>(G) Offer available on items sold by Sears only. In-store offers may vary. Subject to change without notice. Offer requires the use of a qualified Sears Card and is subject to credit approval. Excludes Sears Commercial One&reg; accounts. Sears Home Improvement Account <sup>SM </sup>applies on installed merchandise only. Must select the Savings offer or Special Financing offer on the payment page in checkout to get instant savings or special financing. May not be combined with other promotional offers. Excludes Unilateral Pricing Policy (UPP), Everyday Great Price items, Serta Coralee, Foreston, Hadley, Taryn, Serta Ebuy, Amber Creek, Willow Park, Sealy Talworth, Anaheim, Basford, Dunlap, Sealy Ebuy, Beautyrest Black, Comforpedic and Tempur-Pedic.</p>
+<p><strong>5% OFF ON SELECT FURNITURE (R) ITEMS OVER $499+ OR NO INTEREST IF PAID IN FULL 12 MONTH </strong>on select furniture(R) items over $499+. Interest will be charged to your account from the purchase date if the purchase balance is not paid in full within 12 months. Offer requires the use of a qualified Sears Card.</p>
+<p>Offer valid June 5<sup>th</sup> through June 10<sup>th</sup>, 2017.</p>
+<p><u>See financing disclosures and exclusions(R)</u></p>
+<p>(R) Offer available on items sold by Sears only. In-store offers may vary. Subject to change without notice. Offer requires the use of a qualified Sears Card and is subject to credit approval. Excludes Sears Commercial One&reg; accounts. Sears Home Improvement Account<sup>SM</sup> applies on installed merchandise only. Must select the Savings offer or Special Financing offer on the payment page in checkout to get instant savings or special financing. May not be combined with other promotional offers. Excludes Unilateral Pricing Policy (UPP), Everyday Great Price items.</p>
+<p><strong>5% OFF ON SELECT FURNITURE(S) ITEMS OVER</strong> <strong>$599+ OR NO INTEREST IF PAID IN FULL WITHIN PROMOTIONAL PERIOD </strong>on assorted mattress/foundations(S) items over $599+:</p>
+<p>-18 months** on SELECT FURNITURE(S) $599+ - $1,499.99+</p>
+<p>-24 months** on SELECT FURNITURE(S) $1,500+ - $2,499.99+</p>
+<p>-48 months** on SELECT FURNITURE(S) $2,500+ - $4,099.99+</p>
+<p>-60 months** on SELECT FURNITURE(S) $4,100+ and above</p>
+<p>Interest will be charged to your account from the purchase date if the purchase balance is not paid in full within the promotional period. Offer requires the use of a qualified Sears Card.&nbsp;&nbsp;</p>
+<p>Offer valid June 11<sup>th</sup> through July 1<sup>st</sup>, 2017.</p>
+<p><u>See financing disclosures and exclusions(S)</u></p>
+<p>(S) Offer available on items sold by Sears only. In-store offers may vary. Subject to change without notice. Offer requires the use of a qualified Sears Card and is subject to credit approval. Excludes Sears Commercial One&reg; accounts. Sears Home Improvement Account<sup>SM</sup> applies on installed merchandise only. Must select the Savings offer or Special Financing offer on the payment page in checkout to get instant savings or special financing. May not be combined with other promotional offers. Excludes Unilateral Pricing Policy (UPP), Everyday Great Price items.</p>
+<p>&nbsp;</p>
+<h1><strong>OUTDOOR LIVING/SEASONAL</strong></h1>
+<p><br/> <strong>5% OFF ON OUTDOOR LIVING(H) ITEMS OVER $299+ OR NO INTEREST IF PAID IN FULL WITHIN 12 MONTHS<sup>**</sup></strong>on outdoor living(H) items over $299+. Interest will be charged to your account from the purchase date if the purchase balance is not paid in full within 12 months. Offer requires the use of a qualified Sears Card. <br/> <br/> Offer valid May 28<sup>th</sup> through July 1<sup>st</sup>, 2017.</p>
+<p><br/> <u>See financing disclosures and exclusions (H) </u><br/> <br/> (H) Offer available on items sold by Sears only. In-store offers may vary. Subject to change without notice. Offer requires the use of a qualified Sears Card and is subject to credit approval. Excludes Sears Commercial One&reg; accounts. Sears Home Improvement AccountSM applies on installed merchandise only. Must select the Savings offer or Special Financing offer on the payment page in checkout to get instant savings or special financing. May not be combined with other promotional offers. Excludes Hot Buys, Unilateral Pricing Policy (UPP), and Everyday Great Price items. <br/> </p>
+<p><strong>LAWN &amp; GARDEN</strong></p>
+<p><strong>5% OFF ON LAWN &amp; GARDEN(K) ITEMS OVER $299+ OR NO INTEREST IF PAID IN FULL WITHIN 12 MONTHS** </strong>on lawn and garden(K) items over $299+ or <strong>NO INTEREST IF PAID IN FULL WITHIN 18 MONTHS </strong>on Craftsman "Pro Series" products(K).&nbsp;Interest will be charged for your account from the purchase date if the purchase balance is not paid in full within the promotional period. Offer requires use of a qualified Sears Card.</p>
+<p>Offer valid May 28<sup>th</sup> through June 3<sup>rd</sup>, 2017.</p>
+<p><u>See financing disclosures and exclusions(K)</u></p>
+<p>(K) Offer available on items sold by Sears only. In-store offers may vary. Subject to change without notice. Offer requires the use of a qualified Sears Card and is subject to credit approval. Excludes Sears Commercial One accounts. Sears Home Improvement Account<sup>SM</sup> applies on installed merchandise only. Must select the Savings offer or Special Financing offer on the payment page in checkout to get instant savings or special financing.&nbsp;&nbsp; May not be combined with other promotional offers.&nbsp;&nbsp; Excludes Everyday Great Price items.</p>
+<p><strong>5% OFF ON LAWN &amp; GARDEN(T) ITEMS OVER $299+ OR NO INTEREST IF PAID IN FULL WITHIN 12 MONTHS** </strong>on lawn and garden(T) items over $299+.&nbsp;Interest will be charged for your account from the purchase date if the purchase balance is not paid in full within 12 months. Offer requires use of a qualified Sears Card.</p>
+<p>Offer valid June 4<sup>th</sup> through July 1<sup>st</sup>, 2017.</p>
+<p><u>See financing disclosures and exclusions(T)</u></p>
+<p>(T) Offer available on items sold by Sears only. In-store offers may vary. Subject to change without notice. Offer requires the use of a qualified Sears Card and is subject to credit approval. Excludes Sears Commercial One accounts. Sears Home Improvement Account<sup>SM</sup> applies on installed merchandise only. Must select the Savings offer or Special Financing offer on the payment page in checkout to get instant savings or special financing.&nbsp;&nbsp; May not be combined with other promotional offers.&nbsp;&nbsp; Excludes Everyday Great Price items.</p>
+<p>&nbsp;</p>
+<h1><strong>GAME ROOM/ SPORTING GOODS</strong></h1>
+<p><br/> <strong>5% OFF ON GAME ROOM/SPORTING GOODS(L) ITEMS OVER $299+ OR NO INTEREST IF PAID IN FULL WITHIN 12 MONTHS** </strong>on game room/sporting goods(L) items over $299+. Interest will be charged to your account from the purchase date if the purchase balance is not paid in full within 12 months. Offer requires the use of a qualified Sears Card. <br/> <br/> Offer valid May 28<sup>th</sup> through July 1<sup>st</sup>, 2017.</p>
+<p><br/> <u>See financing disclosures and exclusions(L) </u><br/> <br/> (L) Offer available on items sold by Sears only. In-store offers may vary. Subject to change without notice. Offer requires the use of a qualified Seas Card and is subject to credit approval. Excludes Sears Commercial One&reg; accounts. Sears Home Improvement AccountSM applies on installed merchandise only. Must select the Savings offer or Special Financing offer on the payment page in checkout to get instant savings or special financing. May not be combined with other promotional offers. Excludes Unilateral Pricing Policy (UPP) and Everyday Great Price items. <br/> </p>
+<h1><strong>AUTOMOTIVE</strong></h1>
+<p><br/> <strong>NO INTEREST IF PAID IN FULL WITHIN PROMOTIONAL PERIOD:</strong> <br/> <br/> -6 months** on automotive and tire(M) items over $199+ made at participating stores <br/> -12 months** on automotive and tire (M) items over $399+ made at participating stores <br/> -12 months** on automotive and tire(M) items over $80+ made online only <br/> <br/> Interest will be charged to your account from the purchase date if the purchase balance is not paid in full within the promotional period. Offer requires the use of a qualified Sears Card. <br/> </p>
+<p>Offer valid May 28<sup>th</sup> through July 1<sup>st</sup>, 2017.</p>
+<p><br/> <u>See financing disclosures and exclusions(M) </u><br/> <br/> (M) Offer available on items sold by Sears only. Subject to change without notice. Offer requires the use of a qualified Sears Card and is subject to credit approval. Excludes Sears Commercial One accounts. Sears Home Improvement AccountSM applies on installed merchandise only. Must select Special Financing offer on the payment page in checkout to get the special financing. May not be combined with other promotional offers. <br/> </p>
+<h1><strong>ELECTRONICS</strong></h1>
+<p><br/> <strong>NO INTEREST IF PAID IN FULL WITHIN 12 MONTHS** </strong>on Electronics(N) items over $597+. Interest will be charged to your account from the purchase date if the purchase balance is not paid in full within 12 months. Offer requires the use of a qualified Sears Card. <br/> <br/> Offer valid June 11<sup>th</sup> through June 17<sup>th</sup>, 2017.</p>
+<p><u>See financing disclosures and exclusions(N) </u><br/> <br/> (N) Offer available on items sold by Sears only. Subject to change without notice. Offer requires the use of a qualified Sears Card and is subject to credit approval. Excludes Sears Commercial One&reg; accounts. Sears Home Improvement AccountSM applies on installed merchandise only. Must select Special Financing offer on the payment page in checkout to get the special financing. May not be combined with other promotional offers. Excludes Unilateral Pricing Policy (UPP) items, Everyday Great Price items, video game hardware, BOSE&reg;, prepaid calling cards, iTunes, Canon DSLR, Nikon&reg; DSLR and lenses, Samsung&reg;, Sharp&reg;, LG and Sony UPP merchandise, computers, converter boxes, tablets, eReaders, streaming players, Belkin WeMo, Phillips Hue and Withings. <br/> </p>
+<h1><strong>FINE JEWELRY</strong></h1>
+<p><br/> <strong>NO INTEREST IF PAID IN FULL WITHIN 12 MONTHS** </strong>on Fine Jewelry(O) items over $299+. Interest will be charged to your account from the purchase date if the purchase balance is not paid in full within 12 months. Offer requires the use of a qualified Sears Card. <br/> <br/> Offer valid May 28<sup>th</sup> through July 1<sup>st</sup>, 2017.<br/> <br/> <u>See financing disclosures and exclusions(O)</u> <br/> <br/> (O) Offer available on items sold by Sears only. In-store offers may vary. Subject to change without notice. Offer requires the use of a qualified Sears Card and is subject to credit approval. Excludes Sears Commercial One&reg; accounts. Sears Home Improvement AccountSM applies on installed merchandise only. Must select Special Financing offer on the payment page in checkout to get special financing. May not be combined with other promotional offers. <br/> <br/> <br/> <strong><u>* Shop Your Way Additional Category Earn Promotion</u></strong> <br/> This promotion is not transferable; is subject to credit approval and the Shop Your Way terms and conditions located at www.shopyourway.com/terms. Additional limitations, terms and conditions apply. You will be given more information when you apply. Your Shop Your Way account must be linked to your new Sears Mastercard in order to participate in this promotion. You have the opportunity to receive Shop Your Way points for eligible purchases which are made and post to your Sears Mastercard account for 12 months from date of account opening. These extra points are inclusive of any base points earned. When extra point offers are combined, total points earned will be less than the combined point totals for each individual offer. Base points mean the 1% back in points which you will receive on purchases that are made outside of Sears, Kmart or other Program Stores or are described below as &ldquo;certain non-eligible purchases&rdquo; and which you will continue to receive after this promotion ends. Sears base points mean those points awarded as part the standard Shop Your Way program. <br/> You may only earn 5% back on eligible gas station purchases and 3% back in points on eligible restaurant and grocery store purchases on the first combined purchases of $10,000 during the promotional period and then 1% thereafter. <br/> <br/> 5% back in points on eligible gas station purchases, for the first $10,000 (which includes the eligible restaurant and grocery store purchases) during the promotional period and then 1% thereafter. (5% back in points equals 4% in extra points and 1% in base points.) <strong>Certain Non-Eligible Purchases</strong>. You will only earn 1% back in base points, not 5%, for gas purchased at superstores, supermarkets, convenience stores and warehouse clubs or for fuel used for non-automobile purposes. <br/> <br/> 3% back in points on eligible restaurant (including cafes, bars, lounges and fast food restaurants) and eligible grocery store purchases for the first $10,000 (which includes the eligible gas station purchases) during the promotional period and then 1% in base points thereafter. (3% back in points equals 2% in extra points and 1% in base points.) <strong>Certain Non-Eligible Purchases</strong>. You will only earn 1% in base points, not 3%, for restaurant purchases made at bakeries and certain restaurants/cafes inside department stores, grocery or warehouse clubs. You will only earn 1% in base points, not 3%, for grocery purchases made at superstores, convenience stores, gas stations, warehouse clubs, and discount stores. <br/> <br/> 2% back in points on purchases at Sears (Full Line Stores Sears Grand, Sears Dealer Stores (Sears Hometown Stores, Sears Home Appliance Showrooms, and Sears Hardware), Kmart, mygofer and for Lands&rsquo; End merchandise within Sears stores that are &ldquo;qualifying purchases&rdquo; under the Shop Your Way program during the promotional period and then 1% in Sears base points thereafter. (2% back in points equals 1% in extra points and 1% in Sears base points.) <br/> <br/> You will receive 1% back in base points on purchases that are made outside of Sears, Kmart or other Program Stores or are described above as &ldquo;certain non-eligible purchases&rdquo;. <br/> <br/> No points are awarded for balance transfers, cash advance transactions, cash advance transactions designated as purchases, convenience checks, returned purchases, disputed or unauthorized purchases/fraudulent transactions, annual credit card membership fees, money orders, wire transfers, bets, lottery tickets, or casino gaming chips, credit insurance premiums, AccountCare fees, interest charges and credit card fees. <br/> <br/> Points will post to your Shop Your Way account within approximately one week after the eligible purchase is made. Merchants must submit charges under the appropriate merchant code or industry code for you to receive the additional Shop Your Way Points. We do not determine whether merchants appropriately identify all transactions you make on your account but we do reserve the right to determine which purchases qualify for points. By accepting Shop Your Way member benefits and offers, you agree to the Shop Your Way terms and conditions, available at www.shopyourway.com/terms. The Shop Your Way program is offered by Sears Holdings Management Corporation. Citibank is not responsible for products or services offered by other companies. <br/> <br/> + For on-line transactions, the required minimum transaction amount is based on the single item selected and you must select Special Financing offer on the payment page in checkout. For in-store transactions, purchase requirement amount is less coupons, discounts and reward certificates, and does not include tax, installation, delivery, shipping or fees, and must be made in a single transaction. <br/> <br/> Offers may not be combinable with other Sears card offers. <br/> </p>
+<p><strong><u>** IMPORTANT SPECIAL FINANCING/DEFERRED INTEREST DETAILS (when offered): </u></strong><br/> <br/> With credit approval for qualifying purchases made on a Sears Card. Sears Commercial One&reg; accounts excluded. Sears Home Improvement Account <sup>(SM)</sup> valid on installed sales only. Sears Cards: As of 5/10/2017, APR for purchases: Variable 7.99% &ndash; 25.99% or non-variable 5.00% &ndash; 26.49%. Minimum interest charge: up to $2. Offer valid for consumer accounts in good standing; is subject to change without notice; see store or sears.com for details. May not be combined with any other promotional offer. Offers not valid at Sears Hometown Stores, Sears Home Appliance Showrooms, Sears Hardware Stores and Sears Outlet Stores.<br/> <br/> Sears cards are issued by Citibank, N.A.</p>
+</div><script>
+if (!shc.isBOT) { 
+  $(document).on(shcWidgets.EVENTS.signalDataReady, function() {
+    bt = $.extend(bt, {
+     siteId: shc.chronStoreName.replace('-','').replace('us', 'com'),
+     gaSite: shc.gaSite,
+     pageType: bt.pageType || shc.getPageType(),
+     isKiosk: shc.isKiosk
+    });
+   if ($.query.get('tealiumDisabled') !== 'true') {
+      FED.Util.addJsFile('//tags.tiqcdn.com/utag/searshc/' + (shc.storeName || 'sears').replace('-pr', '') + (/i\-stage/.test(location.host)?'/qa':'/prod') +'/utag');
+   }
+  });
+}
+</script><script>
+/* 24/7 Chat start */
+if (shc.features.chat247) {
+  shc.chat = {
+    pageDetails: {
+     pxpath: shc.env === 'PROD' ? 'PROD' : 'STAGE',
+     international: !!shc.features.international,
+     language: 'US',
+     isPR: !!(shc.features.searsPR || shc.features.kmartPR),
+     pageName: $('body').attr('id') || 'none',
+     productVertical: window.omVrt || '',
+     productCategory: window.omCat || '',
+     productSubCategory: window.omSubCat || ''
+   },
+   EVENT: {pageLoad:'pageload', click: 'click'},
+   SCOPE: {page: 'page', visitor: 'visitor'},
+   send: function(scope, key, data, event) {
+     if (window._tfsq === undefined) {
+       window._tfsq = [];
+     }
+     _tfsq.push([scope, key, data, event]);
+   }
+  };
+
+  if ($('body').attr('id') === 'product') {
+    $(document).on(shcWidgets.EVENTS.chatDataReady, function(e, data) {
+      if (data.data) {
+        $.extend(shc.chat.pageDetails, data.data);
+      }
+      if ($('body').hasClass('ie8')) {shc.features.chat247=false;}
+      var ch = shc.chat;
+      //defer setting this b/c it's dependant on header getting all profile info
+      ch.pageDetails.loginFlag = $('#profileArea.loggedIn').length > 0;
+      ch.send(ch.SCOPE.page, 'pageDetails', ch.pageDetails, ch.EVENT.pageLoad);
+    });
+  }
+  else {
+    $(window).on('load', function() {
+      if ($('body').hasClass('ie8')) {shc.features.chat247=false;}
+      var ch = shc.chat;
+      //defer setting this b/c it's dependant on header getting all profile info
+      ch.pageDetails.loginFlag = $('#profileArea.loggedIn').length > 0;
+      ch.send(ch.SCOPE.page, 'pageDetails', ch.pageDetails, ch.EVENT.pageLoad);
+    });
+  }
+}
+/* 24/7 Chat end */
+</script>
+
+
+<div ng-if="ordersummary.cardinalFlag=='1'" class="secure-links">
+	<div ng-repeat="cardBrand in cmpiPaymentTypes">
+		<div ng-class="cardBrand + '-secured'" ng-click="secureInfoLayer(cardBrand)" tab-index-click="tab-index-click"></div>
+	</div>
+</div>
+</body>
+
+</html>

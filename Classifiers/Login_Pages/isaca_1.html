@@ -1,0 +1,1267 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html __expr-val-dir="ltr" dir="ltr">
+<head><meta name="msvalidate.01" content="C2B63AAF22E9A3D4C4136AD5C6915208" /><meta name="y_key" content="3f452209a9e754fa" /><meta name="GENERATOR" content="Microsoft SharePoint" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ba55e8a9d4","applicationID":"1639277","transactionName":"ZABUMBdUCEpQB0BfXF1Kdzc1GjlaUBBVWlxUFhkJBEYSXEMUVVFWHAxFBQZUAVxfAUZXXx0ERRQd","queueTime":15,"applicationTime":1484,"ttGuid":"B849344D7785D376","agent":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgUDUFdaGwIGV1hQAAY="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];n.exports=u;var y=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(m,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script><title>
+	
+	Login Page
+
+</title><script src="/_layouts/1033/init.js?rev=TFgMAEbR8RJ7biFPqCsR5w%3D%3D"></script>
+<script type="text/javascript" language="javascript" src="/_layouts/1033/non_ie.js?rev=yfNry4hY0Gwa%2FPDNGrqXVg%3D%3D"></script>
+
+	<script src="/9ffa4600af84abc9026dae89076197a82e6ef025/satelliteLib-1e5fc580126ed2f59d81e58814b5de256b211d82.js"></script>
+    <script src="/_layouts/Ontolica/jquery-1.3.2.js" type="text/javascript"></script>
+	<script src="/Style Library/ajax/jquery/jquery.min.js" type="text/javascript"></script>
+	<script src="/Style Library/ajax/jqueryui/jquery-ui.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/Style Library/scripts/BCCGDefault-min.js"></script>
+	<script src="/_layouts/community/peoplepicker/definejsvars.aspx" type="text/javascript"></script>
+	<!--<script type="text/javascript" src="https://cloud.moovweb.net/api/public/js_redirection/moovweb/isaca-prod.js"></script>-->
+	<script type="text/javascript" src="/Style Library/MoovWeb/moovweb_redirection.js"></script>
+	<script src="/Style Library/scripts/scripts_main.js" type="text/javascript"></script>
+	<script src="/Style Library/scripts/photogallery-min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/Style Library/TestandTarget/mbox.js"></script>
+	
+ 	<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/HtmlEditorTableFormats.css" /><link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/susqtech/controls.css" /><link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/susqtech/core.css" /><link rel="stylesheet" type="text/css" href="/Style Library/ISACADefault.css" /><link rel="stylesheet" type="text/css" href="/Style Library/ISACASearchBox.css" /><link href="/style library/video-js/video-js.min.css" rel="stylesheet" type="text/css" />
+		
+	<!-- Include Print CSS -->
+	<link rel="stylesheet" href="/Style Library/ISACADefault-Print.css" type="text/css" media="print" />
+
+<script type="text/javascript" src="/_layouts/1033/CustomScripts/namefix.js" defer="true"></script>
+<script type="text/javascript" src="/_layouts/1033/SusQtechScripts/dsfix.js" defer="true"></script>
+<script type="text/javascript" src="/_layouts/1033/CustomScripts/dsfix.js" defer="true"></script>
+<script type="text/javascript" src="/_layouts/1033/CustomScripts/wpfix.js" defer="true"></script>
+<script type="text/javascript" src="/_layouts/1033/SusQtechScripts/namefix.js" defer="true"></script>
+	
+	<!--[if gte IE 7]>
+		<script type="text/javascript" src="/Style Library/scripts/ISACADefault-IE-min.js"></script>	
+	<![endif]-->
+	<!--[if lt IE 7]>
+		<script type="text/javascript" src="/Style Library/scripts/ISACADefault-IE-min.js"></script>
+		<script defer="defer" type="text/javascript" language="javascript" src="/Style Library/scripts/pngfix-min.js"></script>
+		<script type="text/javascript" src="/Style Library/scripts/iepngfix_tilebg-min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/Style Library/ISACADefault-IE.css" />
+	<![endif]-->
+	
+	<script type="text/javascript" src="/Style Library/scripts/safeharborprivacyoverlay.js"></script>
+    <link type="text/css" rel="stylesheet" href="/Style Library/safeharborprivacyoverlay.css" />
+
+
+	
+	<!-- Google Tag Manager Container -->
+<noscript><iframe src="/ns.html?id=GTM-T2SJ37"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T2SJ37');</script>
+<!-- End Google Tag Manager Container -->
+
+
+		
+<style type="text/css">
+	.ctl00_PlaceHolderLeftColumn_leftZone_0 { border-color:Black;border-width:1px;border-style:Solid; }
+	.ctl00_PlaceHolderMain_centerTopZone_0 { border-color:Black;border-width:1px;border-style:Solid; }
+	.ctl00_PlaceHolderMain_centerLeftZone_0 { border-color:Black;border-width:1px;border-style:Solid; }
+	.ctl00_PlaceHolderMain_centerRightZone_0 { border-color:Black;border-width:1px;border-style:Solid; }
+	.ctl00_PlaceHolderMain_centerLeftZone2_0 { border-color:Black;border-width:1px;border-style:Solid; }
+	.ctl00_PlaceHolderMain_centerRightZone2_0 { border-color:Black;border-width:1px;border-style:Solid; }
+	.ctl00_PlaceHolderMain_centerBottomZone_0 { border-color:Black;border-width:1px;border-style:Solid; }
+	.ctl00_PlaceHolderRightColumn_rightZone_0 { border-color:Black;border-width:1px;border-style:Solid; }
+	.ctl00_Advertisement_bottom_footerzone_0 { border-color:Black;border-width:1px;border-style:Solid; }
+
+</style></head>
+	
+<body onload="javascript:_spBodyOnLoadWrapper();">
+
+<form name="aspnetForm" method="post" action="Login.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input type="hidden" name="__SPSCEditMenu" id="__SPSCEditMenu" value="true" />
+<input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
+<input type="hidden" name="MSOTlPn_SelectedWpId" id="MSOTlPn_SelectedWpId" value="" />
+<input type="hidden" name="MSOTlPn_View" id="MSOTlPn_View" value="0" />
+<input type="hidden" name="MSOTlPn_ShowSettings" id="MSOTlPn_ShowSettings" value="False" />
+<input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
+<input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
+<input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xAC2C95A1539D76DC4A8C549BE6BC31A025A2DB341024C8A17266B6A89BFBCE010CBBD03B78D1DF0382D7EBC68CC48275EAB784D68E039B3FC944C76D1C8A86C9,01 Jun 2017 13:39:18 -0000" />
+<input type="hidden" name="MSOAuthoringConsole_FormContext" id="MSOAuthoringConsole_FormContext" value="" />
+<input type="hidden" name="MSOAC_EditDuringWorkflow" id="MSOAC_EditDuringWorkflow" value="" />
+<input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
+<input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
+<input type="hidden" name="MSOLayout_LayoutChanges" id="MSOLayout_LayoutChanges" value="" />
+<input type="hidden" name="MSOLayout_InDesignMode" id="MSOLayout_InDesignMode" value="" />
+<input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIBD2QWAgIDD2QWGAIMD2QWAgIBDw9kFgIeBWNsYXNzBRhtcy1zYnRhYmxlIG1zLXNidGFibGUtZXhkAhIPDxYCHgtfIURhdGFCb3VuZGdkZAIaD2QWAmYPZBYEZg9kFgQCAQ8WAh4HVmlzaWJsZWhkAgMPDxYCHwJnFgIeBXN0eWxlBQ5kaXNwbGF5OmJsb2NrO2QCAg8PFgIfAmhkFgICAQ9kFgICAg8PFgIfAmcWAh8DBQ5kaXNwbGF5OmJsb2NrO2QCHA9kFgICAQ9kFgICAQ8WAh8CaBYCZg9kFgQCAg9kFgICAw8WAh8CaGQCAw8PFgIeCUFjY2Vzc0tleQUBL2RkAiIPZBYEAgEPZBYCZg9kFgICAw9kFgICAQ8PFgIfAmdkFgQCAQ8PFgIfAmhkFhwCAQ8PFgIfAmhkZAIDDxYCHwJoZAIFDw8WAh8CaGRkAgcPFgIfAmhkAgkPDxYCHwJoZGQCCw8PFgIfAmhkZAINDw8WAh8CaGRkAg8PDxYEHgdFbmFibGVkaB8CaGRkAhEPDxYCHwJoZGQCEw8PFgQfBWgfAmhkZAIVDw8WAh8CaGRkAhcPFgIfAmhkAhkPFgIfAmhkAhsPDxYCHwJnZGQCAw8PFgIfAmdkFgYCAQ8PFgIfAmdkZAIDDw8WBh4YcGVyc2lzdGVkRXJyb3JBY3Rpb25UcmVlZB4bcGVyc2lzdGVkRXJyb3JBY3Rpb25UcmVlSWRzZB8CZ2RkAgUPDxYCHwJnZGQCAw9kFgJmD2QWAgICD2QWAgIBDw8WAh8CZ2QWAgIBDxYEHgRUZXh0BZ4BPGRpdiBjbGFzcz0nbXMtY29uc29sZXN0YXR1cyc+PGI+UGFnZSBMYXlvdXQ6PC9iPiBHZW5lcmFsIFBhZ2UgKDxhIGhyZWY9Jy9fY2F0YWxvZ3MvbWFzdGVycGFnZS9JU0FDQUdlbmVyYWwuYXNweCcgdGFyZ2V0PSdfYmxhbmsnPklTQUNBR2VuZXJhbC5hc3B4PC9hPik8L2Rpdj4fAmdkAiQPZBYCAgMPZBYCZg9kFgRmDxYCHwJoZAICDxYCHwJnZAIsD2QWAgIBDxYCHhNQcmV2aW91c0NvbnRyb2xNb2RlCymIAU1pY3Jvc29mdC5TaGFyZVBvaW50LldlYkNvbnRyb2xzLlNQQ29udHJvbE1vZGUsIE1pY3Jvc29mdC5TaGFyZVBvaW50LCBWZXJzaW9uPTEyLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTcxZTliY2UxMTFlOTQyOWMBZAIuD2QWBAIBDxYCHwkLKwQBZAIDDxYCHwkLKwQBZAI8D2QWAgIBD2QWAmYPDxYCHwJoZGQCQA9kFhACAw8WAh8JCysEAWQCBQ9kFgJmDw8WAh8CaGRkAgcPZBYCZg8PFgIfAmhkZAIJD2QWAmYPDxYCHwJoZGQCCw9kFgJmDw8WAh8CaGRkAg0PZBYCZg8PFgIfAmhkZAIPD2QWAmYPDxYCHwJoZGQCEw8WAh8JCysEARYCZg9kFgICAQ8PFgQeC0FjY2Vzc1Rva2VuBSQ2Yzc2OTAwZi00OWQ5LTRiMGItYWEyNS0yZWQ2NTEzM2I2MDMeJDZjNzY5MDBmLTQ5ZDktNGIwYi1hYTI1LTJlZDY1MTMzYjYwM2dkZAJCD2QWBAIBD2QWAmYPZBYEAgMPFgIfCAWKAVBsZWFzZSA8YSBocmVmPScvZWNvbW1lcmNlL1BhZ2VzL0xvZ2luLmFzcHg/UmV0dXJuVXJsPWh0dHAlM2ElMmYlMmZ3d3cuaXNhY2Eub3JnJTJmUGFnZXMlMmZMb2dpbi5hc3B4Jz5Mb2dpbjwvYT4gdG8gVmlldyBZb3VyIFF1aWNrIExpbmtzLmQCBQ8WAh8IBYoBUGxlYXNlIDxhIGhyZWY9Jy9lY29tbWVyY2UvUGFnZXMvTG9naW4uYXNweD9SZXR1cm5Vcmw9aHR0cCUzYSUyZiUyZnd3dy5pc2FjYS5vcmclMmZQYWdlcyUyZkxvZ2luLmFzcHgnPkxvZ2luPC9hPiB0byBWaWV3IFlvdXIgUXVpY2sgTGlua3MuZAIDD2QWAmYPDxYCHwJoZGQCRg9kFgICAQ9kFgJmDw8WAh8CaGRkZNpHOKQXo7D5sJjVzHgMzUqAOL1r" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=XwVlp9CrYzCoVzWXbXU8Yg2&amp;t=633750450759627850" type="text/javascript"></script>
+
+<script> var MSOWebPartPageFormName = 'aspnetForm';</script><link rel="stylesheet" href="/_layouts/Ontolica/Core.css" type="text/css"></link>
+<script src="/_layouts/Ontolica/Platform.js?Build=4787" type="text/javascript"></script>
+<script src="/_layouts/Ontolica/SearchBox.js?Build=4787" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+                function DoCallBack(filterText)
+                {
+                    WebForm_DoCallback('ctl00$ContentByQueryWebPart1',filterText,UpdateFilterCallback,0,CallBackError,true);
+                }
+                function CallBackError(result, clientsideString)
+                {                
+                }
+            //]]>
+</script>
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var L_Menu_BaseUrl="";
+var L_Menu_LCID="1033";
+var L_Menu_SiteTheme="";
+//-->
+</script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+UpdateFormDigest('\u002f', 1440000);return _spFormOnSubmitWrapper();
+return true;
+}
+//]]>
+</script>
+
+
+
+<span id="ctl00_ctl30_lblmcode"></span>
+
+
+
+			
+			
+
+<div class="pageWrapper">
+	<div class="headerWrapper" role="banner">
+		<div class="headerLogo">
+			<a href="/">Trust In, and Value From, Information Systems</a>
+		</div>
+		<div class="localizationWrapper corners r6">
+			<ul id="language-select">
+				<li class="lang-english"><a href="/"><span class="icon globe"></span> English</a></li>
+				<li class="lang-chinese simplified"><a href="/Chinese-Simplified">Chinese <span>(Simplified)</span></a></li>
+				<li class="lang-chinese traditional"><a href="/chinese-traditional-">Chinese <span>(Traditional)</span></a></li>
+				<li class="lang-german"><a href="/german">Deutsch</a></li>
+				<li class="lang-spanish"><a href="/spanish">Espanol</a></li>
+				<li class="lang-french"><a href="/french">Francais</a></li>
+				<li class="lang-hebrew"><a href="/hebrew">Hebrew</a></li>
+				<li class="lang-italian"><a href="/italian">Italiano</a></li>
+				<li class="lang-japanese"><a href="/japanese">Japanese</a></li>
+				<li class="lang-korean"><a href="/korean">Korean</a></li>
+				<li class="lang-dutch"><a href="/dutch">Nederlands</a></li>
+				<li class="lang-polish"><a href="/polish">Polski</a></li>
+				<li class="lang-portugese"><a href="/portuguese">Portuguese</a></li>
+
+				
+			</ul>
+		</div>
+		<div class="searchWrapper">
+
+						
+
+			<div class="SearchBoxWrap">
+				<span><table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:5px" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><tr><td style="padding-right:3px"><input id="OSB_Referrer" type="hidden" value="http://www.isaca.org" /><input id="OSB_ContextScopeType" name="OSB_ContextScopeType" type="hidden" value="Site" /><input id="OSB_ContextScopeName" name="OSB_ContextScopeName" type="hidden" value="ISACA" /><select id="OSB_Scopes" class="ms-sbscopes" style=""><option value="TargetOnly;/Search/Pages/PeopleResults.aspx;People;">People</option><option value="TargetOnly;/Search/Pages/DefaultResults.aspx;Site Content;" selected>Site Content</option><option value="SharePoint;/search/pages/conversationresults.aspx;Conversations;">Conversations</option></select></td><td class="ms-sbcell SearchBox" style="width:260px;"><input id="OSB_Keywords" type="text" class="SearchBox" accesskey="s" onkeypress="javascript:return OSB_HandleEnter(event);" title="Enter keywords or Ontolica search expression" /></td><td class="ms-sbgo ms-sbcell"><a href="javascript:OSB_Submit()"><img title="Search with Ontolica" onmouseover="this.src='/design/ISACADefault/buttonSearch.png'" onmouseout="this.src='/design/ISACADefault/buttonSearch.png'" alt="Go Search" src="/design/ISACADefault/buttonSearch.png" style="border-width:0px;" /></a></td><td nowrap="nowrap" class="ms-sblink"><span class="SearchBoxText"><a href="javascript:OSB_NavigateTo('/Search/Pages/DefaultAdvanced.aspx')">Advanced Search</a></span></td></tr></table></span>
+			</div>
+		</div>
+		<div class="globalNavWrapper" role="navigation">
+			
+			 <div class="topNavgationMenu" role="navigation"><ul class="menuStatic"><li id="menuitem1" class="menuItem ABOUT "  ><a href="http://www.isaca.org/about-isaca/Pages/default.aspx">ABOUT </a></li><li id="menuitem2" class="menuItem Membership "  ><a href="http://www.isaca.org/membership/Pages/default.aspx">          Membership        </a></li><li id="menuitem3" class="menuItem CERTIFICATION "  ><a href="http://www.isaca.org/CERTIFICATION/Pages/default.aspx">CERTIFICATION</a></li><li id="menuitem4" class="menuItem Education "  ><a href="http://www.isaca.org/Education/Pages/default.aspx">Education</a></li><li id="menuitem5" class="menuItem COBIT "  ><a href="http://www.isaca.org/cobit/pages/default.aspx">COBIT</a></li><li id="menuitem6" class="menuItem KnowledgeInsights "  ><a href="http://www.isaca.org/Knowledge-Center/Pages/default.aspx">Knowledge & Insights</a></li><li id="menuitem7" class="menuItem Journal "  ><a href="http://www.isaca.org/Journal/Pages/default.aspx">Journal</a></li><li id="menuitem8" class="menuItem Bookstore "  ><a href="http://www.isaca.org/bookstore/Pages/default.aspx?">Bookstore</a></li></ul><div class="menuDropdowns"><div id="menudrop-1" class="menuDrop ABOUT"><table style="width:100%" summary="">
+<tbody>
+<tr>
+<td width="50%" valign=top>
+<div class=topNavYellowarrow style="padding-bottom:5px">  <a title="" href="http://www.isaca.org/About-ISACA/bylaws/Pages/default.aspx"><strong>Bylaws and <br>  Articles of <br>  Incorporation</strong></a></div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  <a title="" href="http://www.isaca.org/About-ISACA/annual-report/Pages/default.aspx"><strong>Annual Report</strong></a></div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  <a title="" href="http://www.isaca.org/About-ISACA/History/Pages/default.aspx"><strong>History</strong></a></div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  <a title="" href="http://www.isaca.org/About-ISACA/What-We-Offer-Whom-We-Serve/Pages/default.aspx"><strong>What We Offer &amp;<br>  Whom We Serve</strong></a></div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  <a title="" href="http://www.isaca.org/About-ISACA/-ISACA-Newsletter/Pages/default.aspx"><strong>@ISACA <br>  Newsletter</strong></a></div></td>
+<td width="50%" valign=top>
+<div class=topNavYellowarrow style="padding-bottom:5px">  <a title="" href="http://www.isaca.org/About-ISACA/Licensing-and-Promotion/Pages/default.aspx"><strong>Licensing and<br>  Promotion</strong></a></div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  <a title="" href="http://www.isaca.org/About-ISACA/Press-room/Pages/default.aspx"><strong>Press Room</strong></a></div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  <a title="" href="http://www.isaca.org/About-ISACA/Volunteering/Pages/default.aspx"><strong>Volunteering</strong></a></div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  <a title="" href="http://www.isaca.org/About-ISACA/Contact-Us"><strong>Contact Us</strong></a></div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  <a title="" href="http://www.isaca.org/About-ISACA/advocacy/Pages/default.aspx"><strong>Advocacy</strong></a></div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  <a title="" href="http://www.isaca.org/About-ISACA/careers-at-ISACA/Pages/default.aspx"><strong>Careers at ISACA</strong></a></div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  <a title="" href="http://www.isaca.org/videos/Pages/ISACATV.aspx"><strong>ISACA TV</strong></a></div></td></tr></tbody></table></div><div id="menudrop-2" class="menuDrop Membership"><table width="100%">
+<tbody>
+<tr>
+<td valign=top style="width:43%">
+<table style="width:100%">
+<tbody>
+<tr>
+<td width=4 class=topNavYellowarrow></td>
+<td width="96%" valign=top><a title="" href="http://www.isaca.org/Membership/Professional-Membership/Pages/default.aspx"><strong>Professional Membership</strong></a> </td></tr>
+<tr>
+<td class=topNavYellowarrow style="width:4px"></td>
+<td valign=top><a href="http://www.isaca.org/Membership/Pages/recent-graduate-membership.aspx"><strong>Recent Graduate Membership </strong></a></td></tr>
+<tr>
+<td class=topNavYellowarrow style="width:4px"></td>
+<td valign=top><a title="" href="http://www.isaca.org/Membership/Student-Membership/Pages/default.aspx"><strong>Student Membership</strong></a> </td></tr>
+<tr>
+<td class=topNavYellowarrow style="width:4px"></td>
+<td valign=top><a title="" href="http://www.isaca.org/Membership/Academic-Membership/Pages/default.aspx"><strong>Academic Membership</strong></a> </td></tr></tbody></table></td>
+<td style="width:56%">
+<table style="width:100%">
+<tbody>
+<tr>
+<td class=topNavYellowarrow style="width:4px"></td>
+<td valign=top><a title="" href="http://www.isaca.org/Membership/Local-Chapter-Information/Pages/default.aspx"><strong>Local Chapter Information</strong></a> </td></tr>
+<tr>
+<td width=4> </td>
+<td valign=top><a class="button yellow" href="http://www.isaca.org/Membership/Join-ISACA/Pages/default.aspx">Join Today</a><span class="buttonCap yellow"></span> </td></tr>
+<tr>
+<td width=4 valign=top></td>
+<td><font size=1>Professional Growth<br>Global Community<br>Advance Your Career<br></font></td></tr></tbody></table></td></tr></tbody></table></div><div id="menudrop-3" class="menuDrop CERTIFICATION"><table style="width:100%" border=0 summary="">
+<tbody>
+<tr>
+<td width="25%" valign=top><a title="" href="http://www.isaca.org/Certification/CISA-Certified-Information-Systems-Auditor/Pages/default.aspx"><img style="border-top:0px solid;border-right:0px solid;border-bottom:0px solid;border-left:0px solid" src="/SiteCollectionImages/2011%20Certification%20logos/CISA-Horizontal-84x33.jpg" border=0></a> </td>
+<td width="25%" valign=top><a href="http://www.isaca.org/Certification/CISM-Certified-Information-Security-Manager/Pages/default.aspx"><img style="border-top:0px solid;border-right:0px solid;width:84px;border-bottom:0px solid;border-left:0px solid" src="/SiteCollectionImages/2011%20Certification%20logos/CISM-Horizontal-84x35.jpg" border=0></a></td>
+<td width="25%" valign=top><a title="" href="http://www.isaca.org/Certification/CGEIT-Certified-in-the-Governance-of-Enterprise-IT/Pages/default.aspx"><img style="border-top:0px solid;border-right:0px solid;border-bottom:0px solid;border-left:0px solid" src="/SiteCollectionImages/2011%20Certification%20logos/CGEIT-Horizontal-75x35.jpg" border=0></a> </td>
+<td width="25%" valign=top><a title="" href="http://www.isaca.org/Certification/CRISC-Certified-in-Risk-and-Information-Systems-Control/Pages/default.aspx"><img style="border-top:0px solid;border-right:0px solid;border-bottom:0px solid;border-left:0px solid" src="/SiteCollectionImages/2011%20Certification%20logos/CRISC-Horizontal-79x35.jpg" border=0></a> </td></tr>
+<tr>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CISA-Certified-Information-Systems-Auditor/Pages/default.aspx">What is CISA</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CISM-Certified-Information-Security-Manager/Pages/default.aspx">What is CISM</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CGEIT-Certified-in-the-Governance-of-Enterprise-IT/Pages/default.aspx">What is CGEIT</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CRISC-Certified-in-Risk-and-Information-Systems-Control/Pages/default.aspx">What is CRISC</a></font></td></tr>
+<tr>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CISA-Certified-Information-Systems-Auditor/What-is-CISA/Pages/default.aspx">Benefits of CISA</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CISM-Certified-Information-Security-Manager/What-is-CISM/Pages/default.aspx">Benefits of CISM</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CGEIT-Certified-in-the-Governance-of-Enterprise-IT/What-is-CGEIT/Pages/default.aspx">Benefits of CGEIT</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CRISC-Certified-in-Risk-and-Information-Systems-Control/What-is-CRISC/Pages/The-Benefits-of-CRISC.aspx">Benefits of CRISC</a></font></td></tr>
+<tr>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CISA-Certified-Information-Systems-Auditor/How-to-Become-Certified/Pages/default.aspx">How to Become<br>Certified</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CISM-Certified-Information-Security-Manager/How-to-Become-Certified/Pages/default.aspx">How to Become<br>Certified</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CGEIT-Certified-in-the-Governance-of-Enterprise-IT/Pages/How-to-Become-Certified.aspx">How to Become<br>Certified</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CRISC-Certified-in-Risk-and-Information-Systems-Control/Pages/How-to-Become-Certified-CRISC.aspx">How to Become<br>Certified</a></font></td></tr>
+<tr>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CISA-Certified-Information-Systems-Auditor/May-June-Exam-Window-Information/Pages/default.aspx">May/June Exam Window Information</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CISM-Certified-Information-Security-Manager/May-June-Exam-Window-Information/Pages/default.aspx">May/June Exam Window Information</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CGEIT-Certified-in-the-Governance-of-Enterprise-IT/May-June-Exam-Window-Information/Pages/default.aspx">May/June Exam Window Information</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CRISC-Certified-in-Risk-and-Information-Systems-Control/May-June-Exam-Window-Information/Pages/default.aspx">May/June Exam Window Information</a></font></td></tr>
+<tr>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CISA-Certified-Information-Systems-Auditor/August-September-Exam-Window-Information/Pages/default.aspx">August/September Exam Window Information</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CISM-Certified-Information-Security-Manager/August-September-Exam-Window-Information/Pages/default.aspx">August/September Exam Window Information</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CGEIT-Certified-in-the-Governance-of-Enterprise-IT/August-September-Exam-Window-Information/Pages/default.aspx">August/September Exam Window Information</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CRISC-Certified-in-Risk-and-Information-Systems-Control/August-September-Exam-Window-Information/Pages/default.aspx">August/September Exam Window Information</a></font></td></tr>
+<tr>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CISA-Certified-Information-Systems-Auditor/Apply-for-Certification/Pages/default.aspx">Apply for Certification</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CISM-Certified-Information-Security-Manager/Apply-for-certification/Pages/default.aspx">Apply for Certification</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CGEIT-Certified-in-the-Governance-of-Enterprise-IT/Apply-for-certification/Pages/default.aspx">Apply for Certification</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CRISC-Certified-in-Risk-and-Information-Systems-Control/Pages/Apply-for-Certification.aspx">Apply for Certification</a></font></td></tr>
+<tr>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CISA-Certified-Information-Systems-Auditor/Pages/Maintain-Your-CISA.aspx">Maintain Your CISA</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CISM-Certified-Information-Security-Manager/Maintain-Your-CISM/Pages/default.aspx">Maintain Your CISM</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CGEIT-Certified-in-the-Governance-of-Enterprise-IT/Pages/Maintain-Your-CGEIT.aspx">Maintain Your CGEIT</a></font></td>
+<td><font size=1><a title="" href="http://www.isaca.org/Certification/CRISC-Certified-in-Risk-and-Information-Systems-Control/Pages/Maintain-Your-CRISC.aspx">Maintain Your CRISC</a></font></td></tr>
+<tr>
+<td width="100%" colspan=4>
+<hr style="border-top-style:none;border-left-style:none;height:1px;background:#b2ccd8;border-bottom-style:none;color:#b2ccd8;padding-top:0px;border-right-style:none;padding-left:0px;margin:0px;padding-right:0px">
+</td></tr></tbody></table>
+<table style="width:100%;margin-top:-5px" border=0 summary="">
+<tbody>
+<tr>
+<td width=4 class=topNavYellowarrow><br>
+<div class=topNavYellowarrow style="margin-top:2px"> </div></td>
+<td width="24%" valign=top><a title="" href="http://www.isaca.org/Certification/Pages/Why-Certify.aspx"><strong>Why Certify </strong></a>
+<div style="padding-top:3px"><a title="" href="http://www.isaca.org/Certification/Additional-Resources/Pages/How-to-Earn-CPE.aspx"><strong>How to Earn CPE</strong></a></div></td>
+<td width=4 class=topNavYellowarrow></td>
+<td width="24%" valign=top><a title="" href="http://www.isaca.org/Certification/Additional-Resources/Pages/maintain.aspx"><strong>Maintain Your Certification</strong></a></td>
+<td width=4 class=topNavYellowarrow></td>
+<td width="24%" valign=top><a title="" href="http://www.isaca.org/Certification/Additional-Resources/Pages/writing-exam-questions.aspx"><strong>Write an Exam Question</strong></a></td>
+<td width=4 class=topNavYellowarrow><br>
+<div class=topNavYellowarrow style="margin-top:2px"> </div></td>
+<td width="24%" valign=top><a title="" href="http://www.isaca.org/Certification/US-DoD-Information/Pages/default.aspx"><strong>US DoD Information</strong></a><br>
+<div style="padding-top:3px"><strong><a title="" href="http://www.isaca.org/Certification/Pages/Exam-Registration.aspx">Exam Registration</a></strong></div></td></tr></tbody></table></div><div id="menudrop-4" class="menuDrop Education"><table width="100%">
+<tbody>
+<tr>
+<td style="width:34%">
+<div><a href="http://www.isaca.org/Education/Conferences/Pages/default.aspx"><strong>CONFERENCES</strong></a></div></td>
+<td style="width:33%">
+<div><a href="http://www.isaca.org/Education/Training/Pages/default.aspx"><strong>TRAINING</strong></a></div></td>
+<td style="width:33%">
+<div><a href="http://www.isaca.org/Education/Online-Learning/Pages/default.aspx"><strong>ONLINE EVENTS </strong></a></div></td></tr></tbody></table>
+<table style="width:100%" summary="">
+<tbody>
+<tr>
+<td style="width:34%"><a title="" href="http://www.isaca.org/ecommerce/Pages/north-america-cacs.aspx"><font size=1>North America CACS</font></a></td>
+<td style="width:33%"><a href="http://www.isaca.org/Education/Training/Pages/Training-Week.aspx"><font size=1>Training Week</font></a></td>
+<td style="width:34%"><a href="http://www.isaca.org/Education/Online-Learning/Pages/webinars.aspx"><font size=1>Webinars</font></a></td></tr>
+<tr>
+<td><a title="" href="http://www.isaca.org/ecommerce/Pages/csx-north-america.aspx"><font size=1>CSX North America</font></a></td>
+<td><a href="http://www.isaca.org/Education/Training/exam-review-courses/Pages/default.aspx"><font size=1>Exam Review Courses</font></a></td>
+<td><a href="http://www.isaca.org/Education/Online-Learning/Pages/Virtual-Conferences.aspx"><font size=1>Virtual Conferences</font></a> </td></tr>
+<tr>
+<td><a title="" href="http://www.isaca.org/ecommerce/Pages/csx-europe.aspx"><font size=1>CSX Europe</font></a></td>
+<td><a title="" href="http://www.isaca.org/Education/Training/On-Site-Training/Pages/default.aspx"><font size=1>Enterprise Training (On-Site)</font></a></td>
+<td><a href="http://www.isaca.org/Education/Online-Learning/Pages/virtual-instructor-led-training.aspx"><font size=1>Virtual Training (VILT)</font></a> </td></tr>
+<tr>
+<td><a href="http://www.isaca.org/ecommerce/Pages/european-cacs-europe.aspx"><font size=1>EuroCACS</font></a><a title="" href="http://www.isaca.org/cyber-conference/index.html"><font size=1></font></a></td>
+<td></td>
+<td></td></tr>
+<tr>
+<td><a title="" href="http://www.isaca.org/Education/Conferences/Pages/grc.aspx"><font size=1>Governance, Risk and Control</font></a><a title="" href="http://www.isaca.org/cyber-conference/2015/index.html"></a></td>
+<td><a href="http://www.isaca.org/Education/COBIT-Education/Pages/default.aspx"><strong>COBIT EDUCATION</strong></a></td>
+<td><a href="http://www.isaca.org/Education/on-demand-learning/Pages/default.aspx"><strong>ON-DEMAND LEARNING</strong></a></td></tr>
+<tr>
+<td><a title="" href="http://www.isaca.org/ecommerce/Pages/csx-2017-cairo.aspx"><font size=1>CSX 2017 Cairo</font></a><a title="" href="http://www.isaca.org/cyber-conference/index.html"><font size=1></font></a></td>
+<td></td>
+<td></td></tr>
+<tr>
+<td><a title="" href="http://latincacs2017.isacacr.org/" target="_blank"><font size=1>Latin America CACS</font></a><a href="http://www.isaca.org/ecommerce/Pages/european-cacs-europe.aspx"><font size=1></font></a></td>
+<td></td>
+<td></td></tr>
+<tr>
+<td><a title="" href="http://www.isaca.org/ecommerce/Pages/africa-cacs.aspx"><font size=1>Africa CACS</font> </a><a title="" href="http://www.isaca.org/ecommerce/Pages/latin-america-cacs.aspx"><font size=1></font></a></td>
+<td> </td>
+<td> </td></tr>
+<tr>
+<td><a title="" href="http://www.oceaniacacs.com.au/" target="_blank"><font size=1>Oceania CACS</font></a> </td>
+<td> </td>
+<td> </td></tr>
+<tr>
+<td><a title="" href="http://www.isaca.org/ecommerce/Pages/asia-pacific-cacs.aspx"><font size=1>Asia Pacific CACS</font></a> </td>
+<td> </td>
+<td> </td></tr>
+<tr>
+<td width="100%" colspan=3>
+<hr style="border-top-style:none;border-left-style:none;height:1px;background:#b2ccd8;border-bottom-style:none;color:#b2ccd8;padding-top:0px;border-right-style:none;padding-left:0px;margin:0px;padding-right:0px">
+</td></tr></tbody></table>
+<table style="width:100%;margin-top:-5px" border=0 summary="">
+<tbody>
+<tr>
+<td valign=top>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div><br></td>
+<td width="34%" valign=top><a href="http://www.isaca.org/Education/Call-for-Papers/Pages/default.aspx"><strong>Call for Speakers</strong></a></td>
+<td valign=top>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div><br></td>
+<td width="33%" valign=top><a href="http://www.isaca.org/Education/Browse-Events/Pages/default.aspx"><strong>Browse All Events</strong></a> 
+<div></div></td>
+<td valign=top>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div><br></td>
+<td width="34%" valign=top><a href="http://www.isaca.org/Education/Exhibit-and-Sponsor-Opportunities/Pages/default.aspx"><strong>Sponsorship Opportunities</strong></a></td></tr></tbody></table></div><div id="menudrop-5" class="menuDrop COBIT"><table style="width:100%" cellpadding=2 summary="">
+<tbody>
+<tr>
+<td valign=top colspan=2>
+<div><a title="" href="http://www.isaca.org/COBIT/Pages/default.aspx"><img style="border-top:0px solid;border-right:0px solid;border-bottom:0px solid;border-left:0px solid" src="/COBIT/PublishingImages/cobit_topnav2.jpg" border=0> </a></div></td></tr>
+<tr>
+<td colspan=2><span class=topNavYellowarrow style="width:10px;padding-bottom:10px">   </span><a href="http://www.isaca.org/COBIT/Pages/default.aspx"><strong>COBIT 5 Home</strong></a></td></tr>
+<tr>
+<td colspan=2><span class=topNavYellowarrow style="width:10px;padding-bottom:10px">   </span><a href="http://www.isaca.org/COBIT/Pages/Product-Family.aspx"><strong>Publications Directory</strong></a></td></tr>
+<tr>
+<td colspan=2><span class=topNavYellowarrow style="width:10px;padding-bottom:10px">   </span><a href="https://cobitonline.isaca.org/?icid=1004934&amp;Appeal=Web"><strong>COBIT Online</strong></a></td></tr>
+<tr>
+<td colspan=2><span class=topNavYellowarrow style="width:10px;padding-bottom:10px">   </span><a href="http://www.isaca.org/ecommerce/Pages/cobit-conference.aspx"><strong>COBIT Conference North America</strong></a></td></tr>
+<tr>
+<td colspan=2><span class=topNavYellowarrow style="width:10px;padding-bottom:10px">   </span><a href="http://www.isaca.org/COBIT/Pages/Education-Training.aspx"><strong>Training &amp; Accreditation</strong></a></td></tr>
+<tr>
+<td colspan=2><span class=topNavYellowarrow style="width:10px;padding-bottom:10px">   </span><a href="http://www.isaca.org/About-ISACA/Licensing-and-Promotion/Pages/Information-on-COBIT-5-Licensing.aspx"><strong>Licensing</strong></a></td></tr>
+<tr>
+<td colspan=2><span class=topNavYellowarrow style="width:10px;padding-bottom:10px">   </span><a href="http://www.isaca.org/restricted/Pages/Conversation.aspx"><strong>Join the Conversation</strong></a></td></tr>
+<tr>
+<td colspan=2><span class=topNavYellowarrow style="width:10px;padding-bottom:10px">   </span><a href="http://www.isaca.org/COBIT/Pages/News.aspx"><strong>News</strong></a></td></tr>
+<tr>
+<td colspan=2><span class=topNavYellowarrow style="width:10px;padding-bottom:10px">   </span><a href="http://www.isaca.org/COBIT/Pages/Recognition.aspx"><strong>Recognition</strong></a></td></tr>
+<tr>
+<td colspan=2><span class=topNavYellowarrow style="width:10px;padding-bottom:10px">   </span><a href="http://www.isaca.org/COBIT/Pages/COBIT-5-Training-Licensing-FAQs.aspx"><strong>FAQs</strong></a></td></tr>
+<tr>
+<td colspan=2><span class=topNavYellowarrow style="width:10px;padding-bottom:10px">   </span><a title="" href="http://www.isaca.org/COBIT/focus/Pages/FocusHome.aspx"><strong>COBIT Focus</strong></a></td></tr>
+<tr>
+<td colspan=2><span class=topNavYellowarrow style="width:10px;padding-bottom:10px">   </span><a title="" href="http://www.isaca.org/COBIT/Pages/COBIT-20th-Anniversary.aspx"><strong>COBIT 20th Anniversary</strong></a></td></tr></tbody></table></div><div id="menudrop-6" class="menuDrop KnowledgeInsights"><table style="width:100%" summary="">
+<tbody>
+<tr>
+<td width=20 height=105 valign=top></td>
+<td width=10 height=105 valign=top>
+<div class=topNavYellowarrow style="padding-bottom:5px;margin-top:112px">  </div></td>
+<td width="35%" height=105 valign=top>
+<div style="padding-bottom:5px"><a title="Industrial Control Systems: A Primer for the Rest of Us" href="http://www.isaca.org/Knowledge-Center/Research/ResearchDeliverables/Pages/industrial-control-systems-a-primer-for-the-rest-of-us.aspx"><img style="border-top:0px solid;border-right:0px solid;border-bottom:0px solid;border-left:0px solid" alt="new research" src="/Knowledge-Center/Research/PublishingImages/ICS-cover-86.jpg" border=0> </a></div>
+<div style="padding-bottom:5px"><a title="Industrial Control Systems: A Primer for the Rest of Us" href="http://www.isaca.org/Knowledge-Center/Research/ResearchDeliverables/Pages/industrial-control-systems-a-primer-for-the-rest-of-us.aspx"><strong>Industrial Control Systems: A Primer for the Rest of Us </strong></a></div></td>
+<td width=20 height=150 valign=top></td>
+<td width=10 height=105 valign=top>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div></td>
+<td width="65%" height=105 valign=top>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/cobit/pages/default.aspx"><strong>COBIT 5</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/cyber/Pages/default.aspx"><strong>Cybersecurity Nexus (CSX)</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Knowledge-Center/Research/Pages/Privacy.aspx"><strong>Privacy</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Knowledge-Center/Research/Pages/White-Papers.aspx"><strong>White Papers</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Knowledge-Center/Research/Pages/Research.aspx"><strong>Research (projects/publications)</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Knowledge-Center/Pages/Communities.aspx"><strong>Browse Knowledge Center Topics </strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Knowledge-Center/ITAF-IS-Assurance-Audit-/Pages/default.aspx"><strong>IS Audit &amp; Assurance</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Knowledge-Center/Academia/Pages/Academia.aspx"><strong>Academia</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Knowledge-Center/Pages/eLibrary.aspx"><strong>eLibrary</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Knowledge-Center/Pages/ISACA-Career-Centre-Powered-by-Boxwood.aspx"><strong>Career Centre</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Pages/Glossary.aspx"><strong>Glossary</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/videos/Pages/ISACATV.aspx"><strong>ISACA TV</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Knowledge-Center/Pages/Podcast.aspx"><strong>ISACA Podcast</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/About-ISACA/Pages/the-nexus-articles.aspx"><strong>The Nexus Articles</strong></a></div></td></tr></tbody></table></div><div id="menudrop-7" class="menuDrop Journal"><table style="width:100%" summary="">
+<tbody>
+<tr>
+<td valign=top>
+<div class=topNavYellowarrow style="padding-bottom:5px;margin-top:112px">  </div></td>
+<td width="50%" valign=top>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Journal/Current-Issue/Pages/default.aspx"><img title="Current Issue" style="border-top:0px solid;height:110px;border-right:0px solid;width:86px;border-bottom:0px solid;border-left:0px solid" src="/Journal/archives/2017/Volume-3/PublishingImages/17v3-cover-sm.jpg" border=0> </a></div>
+<div style="padding-bottom:5px"><a title="Current Issue" href="http://www.isaca.org/Journal/Current-Issue/Pages/default.aspx"><strong>Current Issue</strong></a></div></td>
+<td valign=top>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div></td>
+<td width="50%" valign=top>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Journal/archives/Pages/default.aspx"><strong>Archives</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Journal/Blog"><strong>Journal Blog</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Journal/Quizzes/Pages/default.aspx"><strong>CPE Quizzes</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Journal/Submit-an-Article/Pages/Submit-an-Article.aspx"><strong>Submit an Article</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Journal/Advertise/Pages/Advertising-ISACA-Journal.aspx"><strong>Advertise</strong></a></div>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/Journal/Pages/ISACA-Journal-Editorial-Calendar.aspx"><strong>Editorial Calendar</strong></a></div></td></tr></tbody></table></div><div id="menudrop-8" class="menuDrop Bookstore"><table style="width:100%" summary="">
+<tbody>
+<tr>
+<td width="40%" valign=top>
+<table>
+<tbody>
+<tr>
+<td valign=top>
+<div style="padding-bottom:5px"><a href="https://www.isaca.org/bookstore/Pages/Product-Detail.aspx?Product_code=IPP"><img height=85 title="ISACA Privacy Principles, Governance and Management Program Guide" style="border-top:0px solid;border-right:0px solid;border-bottom:0px solid;border-left:0px solid" src="https://www.isaca.org/SiteCollectionImages/bookstore/covers/IPP-S.jpg" border=0 vspace=4 hspace=4></a></div>
+<div style="padding-bottom:5px"><font size=1><a title="ISACA Privacy Principles, Governance and Management Program Guide" href="https://www.isaca.org/bookstore/Pages/Product-Detail.aspx?Product_code=IPP">ISACA Privacy Principles, Governance and Management Program Guide</a></font></div></td>
+<td valign=top>
+<div style="padding-bottom:5px"><a href="https://www.isaca.org/bookstore/Pages/Product-Detail.aspx?Product_code=WCGEIT"><img height=85 title="Getting Started With GEIT: A Primer for Implementing Governance of Enterprise IT - WEB DOWNLOAD " style="border-top:0px solid;border-right:0px solid;border-bottom:0px solid;border-left:0px solid" src="https://www.isaca.org/SiteCollectionImages/bookstore/covers/WCGEIT-S.jpg" border=0 vspace=4 hspace=2></a></div>
+<div style="padding-bottom:5px"><font size=1><a title="Getting Started With GEIT: A Primer for Implementing Governance of Enterprise IT" href="https://www.isaca.org/bookstore/Pages/Product-Detail.aspx?Product_code=WCGEIT">Getting Started With GEIT: A Primer for Implementing Governance of Enterprise IT</a></font></div></td>
+<td valign=top>
+<div style="padding-bottom:5px"><a href="https://www.isaca.org/bookstore/Pages/Product-Detail.aspx?Product_code=APG"><img height=85 title="A Practical Guide to PCI DSS " style="border-right:0px solid;border-bottom:0px solid;border-left:0px solid" src="https://www.isaca.org/SiteCollectionImages/bookstore/covers/APG-S.jpg" border=0 vspace=4 hspace=4></a></div>
+<div style="padding-bottom:5px"><font size=1><a title="A Practical Guide to PCI DSS " href="https://www.isaca.org/bookstore/Pages/Product-Detail.aspx?Product_code=APG">A Practical Guide to PCI DSS </a></font></div></td></tr></tbody></table></td>
+<td valign=top style="width:4px">
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<div class=topNavYellowarrow style="padding-bottom:5px">  </div>
+<td valign=top>
+<div style="padding-bottom:5px"><a href="http://www.isaca.org/bookstore/Pages/default.aspx"><strong>Search</strong></a></div>
+<div style="padding-bottom:5px"><strong>Top Sellers</strong> <font size=1>
+<div style="padding-left:8px">
+<div style="padding-bottom:5px"><a title="CISA Review Manual" href="https://www.isaca.org/bookstore/Pages/Product-Detail.aspx?Product_code=CRM26ED">CISA Review Manual, 26<sup>th</sup> Edition</a></div>
+<div style="padding-bottom:5px"><a title="CISA Review Questions, Answers &amp; Explanations Database - 12 Month Subscription" href="https://www.isaca.org/bookstore/Pages/Product-Detail.aspx?Product_code=XMXCA15-12M">CISA Review Questions, Answers &amp; Explanations Database - 12 Month Subscription</a></div>
+<div style="padding-bottom:5px"><a title="CISM Review Manual" href="https://www.isaca.org/bookstore/Pages/Product-Detail.aspx?Product_code=CM15ED">CISM Review Manual, 15<sup>th</sup> Edition</a></div>
+<div style="padding-bottom:5px"><a title="CISM Review Questions, Answers &amp; Explanations, 9th Edition" href="https://www.isaca.org/bookstore/Pages/Product-Detail.aspx?Product_code=CQA9ED">CISM Review Questions, Answers &amp; Explanations, 9<sup>th</sup> Edition</a></div></div></font></div></td></tr></tbody></table></div></div></div>
+		</div>
+		<div class='BannerArea '>
+			<div class="bannerContent">	
+<table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td valign="top"><div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ2" width="100%" class="ms-WPBody" OnlyForMePart="true" allowDelete="false" style="" ><table id="cbqwp" cellspacing="0" cellpadding="0" class="cbq-layout-main"><tr><td id="column" width="100%" valign="top"><a href="https://cybersecurity.isaca.org/csx-nexus"><img src="/Banners/csx-banner2c.jpg"></a><div id="footer"></div></td ></tr></table></div></td>
+	</tr>
+</table>
+			</div>						
+		</div>		
+		<ul class="masterNavWrapper">
+			<li class="active"><a href="/">ISACA</a><span class="cap"></span></li>
+			<li><a href="/myisaca/pages/default.aspx">My ISACA</a><span class="cap"></span></li>
+		</ul>
+		<div class="headerLinkWrapper">
+			<ul class='headerLinks'><li><a href="https://support.isaca.org">Support</a></li><li><a href="http://www.isaca.org/bookstore/Pages/Shopping-Cart.aspx">Shopping Cart</a></li><li><a href="http://www.isaca.org/membership/join-isaca/pages/default.aspx">Join ISACA</a></li></ul>
+			<div class="welcomeMenu">
+				<div id="ctl00_ctl39_pnlForms" style="display: inline;">
+	
+    
+    <a id="ctl00_ctl39_ExplicitLogin" href="http://www.isaca.org/_layouts/Authenticate.aspx?Source=%2FPages%2FLogin%2Easpx" style="display:block;">Sign In</a>
+
+</div>	
+	
+
+			</div>
+			
+		</div>
+	</div>
+	<div class="bodyWrapper">
+		<div class="authorTools">
+			
+
+			
+			
+				
+<!-- Console -->
+<span id="ctl00_SPNavigation_ctl02_publishingContext1"></span>
+
+<!-- Console -->
+
+				<span id="ctl00_SPNavigation_ctl03_publishingContextLayout"></span>
+
+			
+		</div>
+		
+			<div class="toolsWrapper">
+				<ul>
+				<li class="email" style="padding-right:25px;">
+               
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script type="text/javascript">
+    function ShowPopup(hoveritem) {
+        hp = document.getElementById("hoverpopup");
+
+        // Set position of hover-over popup 
+        
+        hp.style.top = hoveritem.offsetTop + 25 + "px";
+        hp.style.left = hoveritem.offsetLeft - 150 + "px";
+
+
+        // Set popup to visible 
+        hp.style.visibility = "Visible";
+
+        //set the popup to hide after 4 seconds
+        setTimeout("HidePopup()", 4000);
+        //hp.onmouseout=HidePopup;
+    }
+
+    function HidePopup() {
+        hp = document.getElementById("hoverpopup");
+        hp.style.visibility = "Hidden";
+    }
+
+    function ShareClick(hoveritem) {
+        hp = document.getElementById("hoverpopup");
+
+        if (hp.style.visibility) {
+            // Set position of hover-over popup 
+           
+          
+            hp.style.top = hoveritem.offsetTop + 25 + "px";
+            hp.style.left = hoveritem.offsetLeft - 150 + "px";
+
+
+
+            // Set popup to visible 
+            hp.style.visibility = "Visible";
+        }
+        else {
+            hp.style.visibility = "Hidden";
+        }
+        //set the popup to hide after 3 seconds
+        setTimeout("HidePopup()", 3000);
+        //hp.onmouseout=HidePopup;
+    } 
+
+</script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ba55e8a9d4","applicationID":"1639277","transactionName":"ZABUMBdUCEpQB0BfXF1Kdzc1GjlaUBBVWlxUFhkJBEYSXEMUVVFWHAxFBQZUAVxfAUZXXx0ERRQd","queueTime":15,"applicationTime":1484,"ttGuid":"B849344D7785D376","agent":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgUDUFdaGwIGV1hQAAY="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];n.exports=u;var y=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(m,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script><body>
+
+<table>
+<tr>
+
+<td> <img alt="" src="/_layouts/Images/ShareUitlityImages/Enhanced/share.jpg" /> 
+</td>
+
+<td> <a href="https://www.facebook.com/share.php?u=http://www.isaca.org/Pages/Login.aspx?" target="_blank" onclick="_gaq.push(['_trackEvent', 'Site Header Links', 'Social Media Buttons', 'Facebook']);"><img src='/_layouts/Images/ShareUitlityImages/Enhanced/fb_ic.jpg' border='0'/></a>
+</td>
+
+<td> <a href="https://twitter.com/home?status=Currently readinghttp://www.isaca.org/Pages/Login.aspx?&title= " target="_blank" onclick="_gaq.push(['_trackEvent', 'Site Header Links', 'Social Media Buttons', 'Twitter']);"><img src='/_layouts/Images/ShareUitlityImages/Enhanced/twi_ic.jpg' border='0'/></a>
+</td>
+
+<td> <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.isaca.org/Pages/Login.aspx?&title= " target="_blank" onclick="_gaq.push(['_trackEvent', 'Site Header Links', 'Social Media Buttons', 'Linkedin']);"><img src='/_layouts/Images/ShareUitlityImages/Enhanced/lii_ic.jpg' border='0'/></a>
+</td>
+
+<td>
+<a href='https://plusone.google.com/_/+1/confirm?hl=en&url=http://www.isaca.org/Pages/Login.aspx?' target="_blank" onclick="_gaq.push(['_trackEvent', 'Site Header Links', 'Social Media Buttons', 'Google Plus']);">
+<img src='/_layouts/Images/ShareUitlityImages/Enhanced/gop_ic.jpg' border='0'/></a>
+
+</td>
+
+<td> <a href="/cdn-cgi/l/email-protection#e3dc90968189868097dec3c5818c879ade8b979793d9cccc949494cd8a90828082cd8c9184ccb382848690ccaf8c848a8dcd8290939bdc" target="_blank" onclick="_gaq.push(['_trackEvent', 'Site Header Links', 'Social Media Buttons', 'Email Link']);"><img src='/_layouts/Images/ShareUitlityImages/Enhanced/ema_ic.jpg' alt='Email'  /></a>
+</td>
+
+
+
+<td> 
+<a href="javascript:void(0);"><img alt="" src="/_layouts/Images/ShareUitlityImages/Enhanced/mor_ic.jpg" onclick="ShareClick(this);" onmouseover="ShowPopup(this);" style="position:relative;" id="imgShare" /></a>
+ <div id="hoverpopup" style="visibility:hidden; z-index:1;position:absolute; width:27px; height:27px;">
+   <div style="text-align:center; width:180px; margin-left:auto; margin-right:auto;">
+   <img id="morepopupimage" src="/_layouts/Images/ShareUitlityImages/Enhanced/social-media_pop.png" usemap="#morepopupimage" border="0" width="180" height="35" alt="" />
+   <map id="_morepopupimage" name="morepopupimage">
+   
+   <area shape="rect" coords="0,8,26,31" href='http://www.stumbleupon.com/submit?url=http://www.isaca.org/Pages/Login.aspx?&title= ' alt="Stumbleupon" title="Stumbleupon" target="_blank" onclick="_gaq.push(['_trackEvent', 'Site Header Links', 'Social Media Buttons', 'Stumble Upon']);"/>
+   <area shape="rect" coords="27,8,57,31" href="https://digg.com/submit?url=http://www.isaca.org/Pages/Login.aspx?&title= &bodytext= HTTP/1.1" alt="Digg" title="Digg" target="_blank" onclick="_gaq.push(['_trackEvent', 'Site Header Links', 'Social Media Buttons', 'Digg']);"/>
+   <area shape="rect" coords="67,8,96,31" href="https://www.reddit.com/submit?url=http://www.isaca.org/Pages/Login.aspx?&title= " alt="Reddit" title="Reddit" target="_blank" onclick="_gaq.push(['_trackEvent', 'Site Header Links', 'Social Media Buttons', 'Reddit']);"/>
+   <area shape="rect" coords="103,8,132,31" href='https://secure.delicious.com//post?url=http://www.isaca.org/Pages/Login.aspx?&title= &notes= HTTP/1.1' alt="Delicious" title="Delicious" target="_blank" onclick="_gaq.push(['_trackEvent', 'Site Header Links', 'Social Media Buttons', 'Delicious']);"/>
+   <area shape="rect" coords="133,8,165,31" href="https://www.tumblr.com/share/link?url=http%3A%2F%2Fwww.isaca.org/Pages/Login.aspx?" alt="Tumblr" title="Tumblr" target="_blank" onclick="_gaq.push(['_trackEvent', 'Site Header Links', 'Social Media Buttons', 'Tumblr']);"/>
+   </map>
+
+    </div>
+    </div>
+</td>
+
+</tr>
+</table>
+
+<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+
+
+
+                </li>
+	<li class="print" style=" padding-top:4px;width:27px;">
+	
+	</li>
+	<li class="bookmark" style="padding-top:4px;width:25px;">
+	
+
+
+       <a id="bookmark-this-anon" class="bookmark-this" href="#bookmark"><img src="/_layouts/Images/ShareUitlityImages/Enhanced/book_ic.jpg" alt="Bookmark" /></a>
+
+
+
+	</li>
+				</ul>
+			</div>
+		
+		
+			<div class="breadcrumbWrapper">
+				<span id="ctl00_PlaceHolderCustomBreadcrumb_breadcrumb"><a href="#ctl00_PlaceHolderCustomBreadcrumb_breadcrumb_SkipLink"><img alt="Skip Navigation Links" height="0" width="0" src="/WebResource.axd?d=mZ_7UCLaWqCzSTxp3chRnw2&amp;t=633750450759627850" style="border-width:0px;" /></a><span><a title="ISACA Community is a community site that is designed for providing a social networking environment for users of the site." class="breadcrumbItem" href="/Pages/default.aspx">ISACA</a></span><span> &gt; </span><span><a class="breadcrumbItemActive" href="/Pages/Login.aspx">Login Page</a></span><a id="ctl00_PlaceHolderCustomBreadcrumb_breadcrumb_SkipLink"></a></span>
+			</div>
+		
+		
+		<div class="contentWrapper corners">
+			<div class="contentMain" role="main">
+				
+				<h1 class="pageTitle">
+					
+	Login Page&nbsp;
+
+				</h1>
+				<div class="pageTitleSub">
+					
+	<table class="subtitle-layout">
+		<tr>
+			<td class="subtitle-side">
+				<div id="ctl00_PlaceHolderPageSubTitleInTitleArea_ctl00__ControlWrapper_RichImageField" style="display:inline"><span dir=""></span>&nbsp;</div>
+			</td>
+			<td class="subtitle-main">
+				<div id="ctl00_PlaceHolderPageSubTitleInTitleArea_ctl01__ControlWrapper_RichHtmlField" style="display:inline"></div>
+			</td>
+		</tr>
+	</table>
+
+				</div>
+				<div class="contentMainSidebar">
+				<div></div>
+					<div class="currentNavWrapper corners noTL noBL">
+						
+						
+						
+								<ul class="currentNavItemActive">
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/membershipSubitems.aspx">membershipSubitems</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/404.aspx">Page Not Found</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Alternate-Payment-Methods.aspx">Payment Methods</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/LoggedOutPrivacyPolicyDeclined.aspx">Privacy Policy Declined</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/RememberMe.aspx">Remember Me</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/preferences.aspx">Remember My Preferences</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/RSS-Feed.aspx">RSS Feeds</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Survey-Online-Shopping-Risks.aspx">Shopping on the Job</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/ThankYou.aspx">Thank You</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/ABOUT-ISACA/Pages/default.aspx">About ISACA</a>
+</div>
+<ul>
+</ul></li>
+<li><div class="CurrentNodeItem">
+	<a href="/bookstore/Pages/default.aspx">Bookstore</a>
+</div>
+<ul>
+</ul></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Certification/Pages/default.aspx">Certification</a>
+</div>
+<ul>
+</ul></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Chinese-Simplified/Pages/default.aspx">Chinese (Simplified)</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Chinese-Traditional-/Pages/default.aspx">Chinese (Traditional)</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Dutch/Pages/default.aspx">Dutch</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/EDUCATION/pages/default.aspx">Education</a>
+</div>
+<ul>
+</ul></li>
+<li><div class="CurrentNodeItem">
+	<a href="/French/Pages/default.aspx">French</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/German/Pages/default.aspx">German</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Hebrew/Pages/default.aspx">Hebrew</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/videos/Pages/ISACATV.aspx">ISACA TV</a>
+</div>
+<ul>
+</ul></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Italian/Pages/default.aspx">Italian</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/ITGI/Pages/default.aspx">ITGI</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Japanese/Pages/default.aspx">Japanese</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Journal/Pages/default.aspx">Journal</a>
+</div>
+<ul>
+</ul></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Knowledge-Center/Pages/default.aspx">Knowledge &amp; Insights</a>
+</div>
+<ul>
+</ul></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Korean/Pages/default.aspx">Korean</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Membership/Pages/default.aspx">Membership</a>
+</div>
+<ul>
+</ul></li>
+<li><div class="CurrentNodeItem">
+	<a href="/SiteMap/Pages/default.aspx">SiteMap</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Spanish/Pages/default.aspx">Spanish</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/auckland/Pages/default.aspx">Auckland</a>
+</div>
+<ul>
+</ul></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Illowa/Pages/default.aspx">Illowa</a>
+</div>
+<ul>
+</ul></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Indonesia/Pages/default.aspx">Indonesia</a>
+</div>
+<ul>
+</ul></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Polish/Pages/Default.aspx">Polish</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/restricted/Pages/default3.aspx">Restricted</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/CIO/Pages/default.aspx">CIO</a>
+</div>
+<ul>
+</ul></li>
+<li><div class="CurrentNodeItem">
+	<a href="/COBIT/pages/default.aspx">COBIT</a>
+</div>
+<ul>
+</ul></li>
+<li><div class="CurrentNodeItem">
+	<a href="/OntolicaSearch">OntolicaSearch</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/search/Pages/DefaultResults.aspx">Search</a>
+</div>
+<ul>
+</ul></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/2012-Governance-of-Enterprise-IT-GEIT-Survey.aspx">2012 Governance of Enterprise IT (GEIT) Survey</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/2013-Risk-Reward-Barometer.aspx">2013 IT Risk/Reward Barometer</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/AboutISACASubMenu.aspx">AboutISACASubMenu</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Verify.aspx">Account Verification</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/error.aspx">An Error Has Occurred</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/BookstoreSubMenu.aspx">BookstoreSubMenu</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/certificationSubItems.aspx">certificationSubItems</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/ChangePassword.aspx">Change Your Password</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/CobitSubmenu.aspx">COBIT Sub</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/search-alternatives.aspx">Common Search Terms</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/DocumentDownloadRegistration.aspx">Download Registration</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/EducationSubItems.aspx">EducationSubItems</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/ExpandedSourcesforRSSFeeds.aspx">Expanded Sources for RSS Feeds</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/FileDownload.aspx">FileDownload</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Forgot.aspx">Forgot Your Password?</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Most-Frequently-Asked-Questions.aspx">Frequently Asked Questions</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Glossary.aspx">Glossary</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Home.aspx">Home</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/ISACAWelcome.aspx">ISACA</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/default2.aspx">ISACA</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/ISACA-Glossary-of-Terms-Translations.aspx">ISACA Glossary of Terms Translations</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Privacy.aspx">ISACA Privacy Policy – Your Privacy Rights</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Terms-of-Use.aspx">ISACA Web Site Terms of Use</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Terms-of-Use-FT.aspx">ISACA Web Site Terms of Use</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/New-web-site.aspx">ISACA Web Site: Building a Community</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Survey-Risk-Reward-Barometer.aspx">ISACA’s 2011 IT Risk/Reward Barometer</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/2012-Risk-Reward-Barometer.aspx">ISACA’s 2012 IT Risk/Reward Barometer</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/JournalSubItems.aspx">JournalSubItems</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/knowledgeCenterSubItems.aspx">knowledgeCenterSubItems</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Learn-About-the-Knowledge-Center.aspx">Learn About the Knowledge Center</a>
+</div></li>
+<li><div class="CurrentNodeCSS">
+	Login Page
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/LoggedOut.aspx">Logout</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Maintenance-Notification.aspx">Maintenance Notification</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/MarketingCampaign.aspx">Marketing Campaign</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/cyber/Pages/default.aspx">cyber</a>
+</div>
+<ul>
+</ul></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Survey-Online-Shopping-Risks-2011.aspx">Shopping on the Job</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/SiteMap.aspx">Site Map</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/T1F1.aspx">T1F1.aspx</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Maintenance.aspx">Maintenance Notice</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/ChapterContactUs.aspx">Chapter Contact Us</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/2014-risk-reward-barometer.aspx">2014 IT Risk/Reward Barometer</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/ErrorPage.htm">An Error Has Occurred</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Cybersecurity-Global-Status-Report.aspx">Cybersecurity Global Status Report</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/Cybersecurity-and-the-US-State-of-the-Union-Expert-Insights.aspx">Cybersecurity and the US State of the Union: Expert Insights</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/mobile-payment-security-study.aspx">2015 Mobile Payment Security Study</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/2015-risk-reward-barometer.aspx">2015 IT Risk/Reward Barometer</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/2016-Cybersecurity-Snapshot.aspx">2016 Cybersecurity Snapshot</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/proprietary-rights-complaint-process-and-notification-form.aspx">Proprietary Rights Complaint Process and Notification Form</a>
+</div></li>
+<li><div class="CurrentNodeItem">
+	<a href="/Pages/About-Our-Ads.aspx">Ad and Cookie Policy</a>
+</div></li>
+</ul>
+						
+						
+						
+					</div>
+					<div class="contentMainSidebarContent">
+						
+	
+
+						
+					</div>
+				</div>
+				<div class="contentMainCenter">
+					
+	
+	
+	<div id="ctl00_PlaceHolderMain_ctl00__ControlWrapper_RichHtmlField" style="display:inline"><table width="100%">
+<tbody>
+<tr>
+<td width="50%">Please type in your ISACA username and password and click the 'Login' button to proceed. If you do not have a Web profile with ISACA, please use the form to the right. Thank you. </td>
+<td>In order to create a new profile or to determine if you are already registered on the system, please provide your Last/Family Name and Email Address in the fields below and click the 'Continue' button to proceed. </td></tr></tbody></table></div>
+	
+	
+	<div class="dualColumnLeft">
+		<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td id="MSOZoneCell_WebPartWPQ4" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tr class="ms-WPHeader">
+						<td title="   - Displays a ISGweb page within any SharePoint web-part page." id="WebPartTitleWPQ4" style="width:100%;"><h3 class="ms-standardheader ms-WPTitle"><nobr><span>  </span><span id="WebPartCaptionWPQ4"></span></nobr></h3></td>
+					</tr>
+				</table></td>
+			</tr><tr>
+				<td class="ms-WPBorder" valign="top"><div WebPartID="b126c072-a47c-4fa7-a31f-52e9e16996f9" HasPers="false" id="WebPartWPQ4" width="100%" class="ms-WPBody" allowDelete="false" style="" ><div id="ctl00_ctl33_g_b126c072_a47c_4fa7_a31f_52e9e16996f9">
+					
+				<table border='0' style='width:97%;'> 
+				<tr>
+				<td valign='top'> 
+					<iframe src='https://svpr-isg-a1.isaca.org/ISGweb/LogIn/Login.aspx?ReturnPage=Association/ReturnAssociationPage.aspx' 
+							isgwebsite='1' 
+							name='ISGwebContainer' id='ISGwebContainer'
+							width='100%'
+							marginwidth='1' marginheight='0' frameborder='0' vspace='0' hspace='0' 
+							scrolling='no' 
+							style='overflow:hidden;display:block;'>
+						Sorry, your browser doesn't support iframes. 
+					</iframe> 
+                </td> 
+				</tr>
+				</table>	
+			
+				</div></div></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+	</div>
+	<div class="dualColumnRight">
+		
+	</div>
+	<div class="cb"></div>
+	
+	<div class="dualColumnLeft2">
+		
+	</div>
+	<div class="dualColumnRight2">
+		
+	</div>
+	<div class="cb"></div>
+	
+	
+	
+	
+	        
+        <span id="ctl00_PlaceHolderMain_ctl02_ctl00_requiredMembership"></span>
+    
+
+				</div>
+				<div class="cb"></div>
+			</div>
+			<div class="contentSidebar corners" role="complementary">
+				
+	
+
+<div class="widget myBookmarks">
+ <div class="widgetHeader">
+  <div class="widgetFooter">
+   <a class="edit corners" href="#edit">Edit</a>
+   <h3>Quick Links</h3>
+   <div class="tabs quickLinks">
+    <ul class="tab-strip">
+    <li><a href="#contextual-links">I want to...</a></li>
+     <li><a href="#my-bookmarks">My Bookmarks</a></li>
+     <li><a href="#saved-searches">Saved Searches</a></li>
+    </ul>
+    <div id="contextual-links">
+        <table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td valign="top"><div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ3" width="100%" class="ms-WPBody" OnlyForMePart="true" allowDelete="false" style="" ><table id="cbqwp" cellspacing="0" cellpadding="0" class="cbq-layout-main"><tr><td id="column" width="100%" valign="top"><div id="linkitem" class="item link-item bullet" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime"><a href="http://www.isaca.org/Knowledge-Center/COBIT/Pages/Overview.aspx" Title="COBIT landing page">Download COBIT</a></div><div id="linkitem" class="item link-item bullet" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime"><a href="http://www.isaca.org/Certification/Additional-Resources/Pages/How-to-Earn-CPE.aspx" Title="How to earn CPE credits">Earn CPE credits</a></div><div id="linkitem" class="item link-item bullet" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime"><a href="http://www.isaca.org/Membership/Local-Chapter-Information/Pages/default.aspx" Title="Find a local chapter">Find a local chapter</a></div><div id="linkitem" class="item link-item bullet" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime"><a href="http://www.isaca.org/Membership/Join-ISACA/Pages/default.aspx" Title="Join - Professional Membership">Join ISACA</a></div><div id="linkitem" class="item link-item bullet" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime"><a href="http://www.isaca.org/Education/Pages/default-old.aspx" Title="Browse events page">Register for an event</a></div><div id="linkitem" class="item link-item bullet" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime"><a href="http://www.isaca.org/renew" Title="Renew Online">Renew My Membership and/or Certification</a></div><div id="linkitem" class="item link-item bullet" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime"><a href="http://www.isaca.org/About-ISACA/Volunteering/Pages/default.aspx" Title="Learn about volunteering opportunities">Volunteer with ISACA</a></div><div id="footer"></div></td ></tr></table></div></td>
+	</tr>
+</table>
+    </div>
+    <div id="my-bookmarks">
+        Please <a href='/ecommerce/Pages/Login.aspx?ReturnUrl=http%3a%2f%2fwww.isaca.org%2fPages%2fLogin.aspx'>Login</a> to View Your Quick Links.
+    </div>
+    <div id="saved-searches">
+        Please <a href='/ecommerce/Pages/Login.aspx?ReturnUrl=http%3a%2f%2fwww.isaca.org%2fPages%2fLogin.aspx'>Login</a> to View Your Quick Links.
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+	<div class="no-top-corners">
+		
+	</div>
+
+				
+			</div>
+			<div class="cb"></div>
+		</div>
+	</div>
+	<div class="footerWrapper">
+	<div class="overlay-bg"></div>
+			<div class="overlay-content popup1">
+			   <table><tr><td class="mboxtext"><strong>THIS WEBSITE USES INFORMATION GATHERING TOOLS INCLUDING COOKIES, AND OTHER SIMILAR TECHNOLOGY.</strong><br />
+			   BY USING THIS WEBSITE, YOU CONSENT TO USE OF THESE TOOLS. IF YOU DO NOT CONSENT, DO NOT USE THIS WEBSITE. USE OF THIS WEBSITE IS NOT REQUIRED BY ISACA. 
+			   OUR PRIVACY POLICY IS <a href="/pages/Privacy.aspx" target="_blank" style="color:yellow">LOCATED HERE</a>.</td>
+			    	<td class="closebtn"><button class="close-btn">&nbsp;</button></td></tr></table>
+			</div>
+
+		<div class="footerCap"></div>	
+		<div class="advert_bottom">
+			
+	<div class="advert_wrap"> 
+          <table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td id="MSOZoneCell_WebPartWPQ5" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="4037bb8b-420b-4bca-b09c-6b01148b8336" HasPers="false" id="WebPartWPQ5" width="100%" class="ms-WPBody" allowDelete="false" style="" ><P>Welcome to the community!</P><P>Please login to access your homepage and begin using all of the community features.</P></div></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>                             
+	 </div>
+
+		</div>	
+		<div class="footerMain">
+					<div class="footerCopy">				
+				&copy; 2017 ISACA. All Rights Reserved
+			</div>				
+
+			<ul class='footerLinks'><li><a href="http://www.isaca.org/SiteMap">Site Map</a></li><li><a href="http://www.isaca.org/About-ISACA/Contact-Us/Pages/Contact-Form.aspx">Contact Us</a></li><li><a href="http://www.isaca.org/About-ISACA/Press-room/Pages/default.aspx">Press Room</a></li><li><a href="http://www.isaca.org/pages/Terms-Of-Use.aspx">Terms of Use</a></li><li><a href="http://www.isaca.org/pages/Privacy.aspx">ISACA PRIVACY POLICY – YOUR PRIVACY RIGHTS</a></li><li><a href="http://www.isaca.org/Pages/About-Our-Ads.aspx">Ad and Cookie Policy</a></li><li><a href="http://www.isaca.org/About-ISACA/Licensing-and-Promotion/Pages/IP-Guidelines.aspx">IP Guidelines</a></li></ul>
+			
+					
+<div class="cb"></div>
+
+
+		</div>	
+				
+
+	</div>
+</div>
+
+
+
+
+
+				<script language='JavaScript'  type='text/JavaScript'> 
+					function openWindow(theURL) {
+						var iframe = document.getElementById('ISGwebContainer');
+						iframe.width = '100%';
+						window.open(theURL,'ISGwebContainer','toolbar=no,status=no,menubar=no,scrollbars=yes');
+					}
+				</script>
+			
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';//]]>
+</script>
+<script type="text/javascript" language="javascript" src="/_layouts/1033/core.js?rev=mHKsOQ0iU3Q5jdm9OZNDdg%3D%3D"></script>
+</form>
+
+	<script type="text/javascript">
+		$(document).ready(function(){	
+			
+			var scopeArray = new Array();
+			
+			$('#OSB_Scopes option').each(function(){
+			    a = $(this).text();
+			    scopeArray.push($(this).text());
+			});
+			scopes = scopeArray;
+		});
+	</script>
+
+
+<script type="text/javascript">
+
+//Function override to fix the query parameter issue with Ontolica
+function OSB_Submit()
+{ 
+	var scopeArray = new Array();
+	
+	$('#OSB_Scopes option').each(function(){
+	    a = $(this).text();
+	    scopeArray.push($(this).text());
+	});
+	scopes = scopeArray;
+
+  var referrerElem = document.getElementById('OSB_Referrer');
+  if (referrerElem == null) return;  
+  var scopeElem = document.getElementById('OSB_Scopes');
+  if (scopeElem == null) return;
+  var contextScopeTypeElem = document.getElementById('OSB_ContextScopeType');
+  var contextScopeNameElem = document.getElementById('OSB_ContextScopeName');
+  
+  var scopeParams = scopeElem.value.split(';');
+  var scopeType = scopeParams[0];
+  var targetUrl = scopeParams[1];
+  var scopeName = scopeParams[2];
+  var contextUrl = scopeParams[3];
+  
+  var keywordsElem = document.getElementById('OSB_Keywords');
+  if (keywordsElem == null) return;
+
+  var k = keywordsElem.value;    
+  var requestUrl = targetUrl;
+  requestUrl += '?k=' + encodeURIComponent(k);
+  requestUrl += '&s=' + scopeName;
+  requestUrl += '&start1=0';
+  
+  if (contextScopeTypeElem != null)
+  {
+    requestUrl += '&ct=' + contextScopeTypeElem.value;
+  }
+
+  if (contextScopeNameElem != null)
+  {
+    requestUrl += '&cs=' + contextScopeNameElem.value;
+  }
+  
+  if (contextUrl != '')
+  {
+    requestUrl += '&cu=' + contextUrl;
+  }
+  
+  requestUrl += '&scopes=' + scopes;
+  window.location.href = requestUrl; 
+}
+
+
+loadAfterContent();</script>
+
+<script type="text/javascript">
+	$(document).ready(function (){
+		cURL = $(location).attr('href');
+		cURL = unescape(cURL);
+		curl = cURL.indexOf("scopes=");
+		
+		if (curl > -1){
+
+			urlScopes = cURL.substring(curl + 7, cURL.length);
+			eScopes = urlScopes.split(",");
+
+		//Adjust scopes accordingly
+			$('#OSB_Scopes option').each(function(){
+				a = $(this).text();
+				if ( jQuery.inArray( a, eScopes) == -1 ){
+					$(this).remove();
+				}
+			});
+		//Adjust tabs accordingly
+			$('.TabsUL a').each(function(){
+				b = $(this).text();
+				if ( jQuery.inArray( b, eScopes) == -1 ){
+					$(this).parent('li').remove();
+				}
+			});
+		//Remove Member's only icon if in Chapter Leader Scope
+			if ( jQuery.inArray ("Chapter Leader", eScopes) > -1 ){
+				$('.MembersOnly').hide();
+			}
+		}
+	});
+
+</script>
+<script type="text/javascript">_satellite.pageBottom();</script>
+</body>
+</html>

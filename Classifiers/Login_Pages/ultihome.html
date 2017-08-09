@@ -1,0 +1,127 @@
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<!-- BEGIN HEAD -->
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta charset="utf-8"/>
+        <title>UltiHome Login</title>
+        
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta name="MobileOptimized" content="320">
+
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <link href="/loginassets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/loginassets/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <!-- END GLOBAL MANDATORY STYLES -->
+
+        <!-- BEGIN THEME STYLES -->
+        <link href="/loginassets/css/style-metronic.css" rel="stylesheet"/>
+<link href="/loginassets/css/style.css" rel="stylesheet"/>
+<link href="/loginassets/css/style-responsive.css" rel="stylesheet"/>
+
+        <link href="/Content/styles/login.css" rel="stylesheet" type="text/css"/>
+        <link href="/loginassets/css/bootstrap-switch-metro.css" rel="stylesheet"/>
+
+
+        <!-- END THEME STYLES -->
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+    </head>
+
+<body class="login">
+    <div class="logo">
+        <img src="/Content/Images/UltiHome-logo-transparent-340x92.png" alt="" width="340" height="92" />
+    </div>
+    <div class="content">
+<form action="/login?ReturnUrl=%2FHelp" class="login-form" id="frmLogin" method="post" name="frmLogin">            <div class="form-group">
+                <label class="control-label text-muted">Username</label>
+                <div class="input-icon">
+                    <i class="fa fa-user" style="padding-top:7px;"></i>
+                    <input autocomplete="off" class="form-control input-lg" id="txtUserName" name="UserName" type="text" value="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label text-muted">Password</label>
+                <div class="input-icon">
+                    <i class="fa fa-lock" style="padding-top:7px;"></i>
+                    <input autocomplete="off" class="form-control input-lg" id="txtPassword" name="Password" type="password" />
+                </div>
+            </div>
+            <div class="form-group pull-right" style="padding-top:15px;padding-bottom:15px;">
+                <label class="control-label text-muted" style="padding-right:20px;">Remember Me: </label>
+                <div class="make-switch" data-on="success" data-on-label="YES" data-off-label="NO">
+                    <input checked="checked" data-val="true" data-val-required="The RememberMe field is required." id="chkRemeberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
+                        
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div>
+                <button type="submit" class="btn green btn-block">
+                    Login <i class="m-icon-swapright m-icon-white"></i>
+                </button>
+            </div>
+            <hr/>
+            <div>
+                <h4>What is my UserName?</h4>
+                <p>
+                    This will be your <strong>Corporate Domain</strong> account<br/>
+                    <em>This is the same account you use to login to your laptop every day!</em>
+                </p>
+            </div>
+            <div>
+                <p>
+                    Having issues logging in?  Need Access?<br/>
+                    <a href="mailto:help@ultimatesoftware.com?subject=Intranet Login Issues" id="lnkHelp">Click Here for help!</a>
+                </p>
+            </div>
+</form>    </div>
+
+    
+    <script src="/loginassets/js/respond.min.js"></script>
+<script src="/loginassets/js/jquery-1.10.2.min.js"></script>
+<script src="/loginassets/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="/loginassets/js/bootstrap.min.js"></script>
+<script src="/loginassets/js/bootstrap-switch.min.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        $("#txtUserName").focus();
+    });
+</script>
+
+    <script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-77870487-2', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+
+
+</body>
+</html>
